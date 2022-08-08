@@ -1,2 +1,9 @@
 <!--pages/lessons/index.wxml-->
-<text>pages/lessons/index.wxml</text>
+<view class="h1">Lessons</view>
+<view class="card-lesson">
+  <image src="#">Subject icon</image>
+  <view class="card-lesson-info">
+    <text>Subject</text>
+    <text>Lesson title</text>
+  </view>
+</view>
