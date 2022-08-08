@@ -1,12 +1,23 @@
 /* pages/lessons/index.wxss */
+.header {
+  display: flex;
+  justify-content: center;
+  color: rgb(0,134,249);
+  font-weight: 500;
+  font-size: larger;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  margin-bottom: 10rpx;
+}
+
 .card-lesson {
   display: flex;
   align-items: center;
   background: whitesmoke;
-  box-shadow: 0 0 8rpx rgb(1,1,1);
+  box-shadow: 0 0 16rpx rgb(1,1,1);
   margin-bottom: 16rpx;
   border-radius: 6rpx;
-  border: 8rpx solid rgb(1,1,1);
+  border: 2rpx solid rgb(1,1,1);
+  margin: 0 8rpx;
 }
 
 .card-lesson image {
@@ -18,9 +29,9 @@
   padding: 16rpx;
 }
 
-text {
+.card-lesson-info text {
   color: rgb(85,98,115);
-  font-size: 36rpx;
+  font-size: medium;
   font-weight: 500;
   margin: 0;
   margin-bottom: 8rpx;

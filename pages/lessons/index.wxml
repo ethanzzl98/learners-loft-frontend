@@ -1,5 +1,5 @@
 <!--pages/lessons/index.wxml-->
-<view class="h1">Lessons</view>
+<view class="header">Lessons</view>
 <view class="card-lesson">
   <image src="#">Subject icon</image>
   <view class="card-lesson-info">
