@@ -12,7 +12,6 @@ App({
     // 登录
     wx.login({
       success: res => {
-        console.log(res)
         // 发送 res.code 到后台换取 openId, sessionKey, unionId
         wx.request({
           url: `${app.globalData.baseUrl}/login`,
@@ -29,6 +28,8 @@ App({
     })
   },
   globalData: {
+    header: null,
     baseUrl: 'http://localhost:3000/api/v1',
+    user: null
   }
 })

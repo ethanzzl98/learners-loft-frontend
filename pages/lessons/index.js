@@ -1,4 +1,5 @@
 // pages/lessons/index.js
+const app = getApp()
 Page({
 
   /**
@@ -12,16 +13,27 @@ Page({
    * Lifecycle function--Called when page load
    */
   onLoad(options) {
-    setTimeout(()=>{
-      wx.request({
+    const page = this;
+    if (app.globalData.header) {
+      page.getData()
+    } else {
+      wx.event.on('loginFinish', page, page.getData)
+    }
+  },
+
+  getData() {
+    const page = this
+    wx.request({
       url: `${app.globalData.baseUrl}/lessons`,
       method: 'GET',
       header: app.globalData.header,
       success(res) {
-        console.log(res)
+        console.log(res);
+        page.setData({
+          lessons: res.data
+        })
       }
     })
-    }, 1000);
   },
 
   /**

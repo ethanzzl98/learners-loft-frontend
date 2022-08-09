@@ -1,10 +1,10 @@
 <!--pages/lessons/index.wxml-->
 <view style="background-color: rgb(235,235,235); background-size: cover; height: 100vh; overflow-y: scroll;">
   <view class="header">Lessons</view>
-  <view class="card-lesson">
-    <image src="#">Subject icon</image>
+  <view class="card-lesson" wx:for="{{ lessons }}">
+    <!-- <image src="#">Subject icon</image> -->
     <view class="card-lesson-info">
-      <view class="subject">Subject</view>
+      <view class="subject">{{ item.subject }}</view>
       <view class="title">Lesson title</view>
     </view>
   </view>
