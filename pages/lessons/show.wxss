@@ -10,13 +10,14 @@
 }
 
 .card-lesson {
-  background: whitesmoke;
+  background: white;
   box-shadow: 0 0 16rpx rgb(1,1,1);
   margin: 0 8rpx;
   border-radius: 6rpx;
   border: 2rpx solid rgb(1,1,1);
   overflow: hidden;
   position: relative;
+  margin-bottom: 10rpx;
 }
 
 .card-lesson image {
@@ -31,6 +32,7 @@
   align-items: flex-end;
   justify-content: space-between;
   padding: 10rpx;
+  border-bottom: 2rpx solid rgb(1,1,1);
 }
 
 .subject {
@@ -72,4 +74,37 @@ icon {
   top: 210rpx;
   box-shadow: 0 0 6rpx rgb(1,1,1);
   background-color: gray;
+}
+
+.description {
+  width: 100%;
+  height: 150rpx;
+  padding: 10rpx;
+  text-align: center;
+}
+
+text {
+  color: rgb(125,125,125);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: 100;
+  font-size: 36rpx;
+}
+
+.buttons {
+  display: flex;
+  margin: 0 8rpx;
+}
+
+.btn-book {
+  background-color: #F27E0D;
+  color: white;
+  border-radius: 50rpx;
+  box-shadow: 0 0 10rpx #7E0DF2;
+}
+
+.btn-edit {
+  background-color: #F27E0D;
+  color: white;
+  border-radius: 50rpx;
+  box-shadow: 0 0 10rpx #7E0DF2;
 }
