@@ -1,9 +1,9 @@
-<!--pages/lessons/index.wxml-->
+<!--pages/bookings/index.wxml-->
 <view style="background-color: rgb(235,235,235); background-size: cover; height: 100vh; overflow-y: scroll;">
-  <view class="header">Lessons</view>
-  <view class="card-lesson">
+  <view class="header">Bookings</view>
+  <view class="card-booking">
     <image src="#">Subject icon</image>
-    <view class="card-lesson-info">
+    <view class="card-booking-info">
       <view class="subject">Subject</view>
       <view class="title">Lesson title</view>
     </view>

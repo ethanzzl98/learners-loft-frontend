@@ -1,4 +1,4 @@
-/* pages/lessons/index.wxss */
+/* pages/bookings/index.wxss */
 .header {
   display: flex;
   justify-content: center;
@@ -10,7 +10,7 @@
   margin-top: 10rpx;
 }
 
-.card-lesson {
+.card-booking {
   display: flex;
   align-items: center;
   background: white;
@@ -21,13 +21,13 @@
   margin: 0 8rpx;
 }
 
-.card-lesson image {
+.card-booking image {
   height: 200rpx;
   width: 150rpx;
   margin-right: 16rpx;
 }
 
-.card-lesson-info {
+.card-booking-info {
   padding: 16rpx;
 }
 
