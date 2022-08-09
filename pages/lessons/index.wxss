@@ -3,7 +3,7 @@
   display: flex;
   justify-content: center;
   color: #7E0DF2;
-  font-weight: 500;
+  font-weight: 600;
   font-size: larger;
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   margin-bottom: 10rpx;
@@ -29,10 +29,20 @@
   padding: 16rpx;
 }
 
-.card-lesson-info text {
-  color: rgb(85,98,115);
+.subject {
+  color: #E1341E;
   font-size: medium;
   font-weight: 500;
   margin: 0;
   margin-bottom: 8rpx;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.title {
+  color: #E1341E;
+  font-size: medium;
+  font-weight: 500;
+  margin: 0;
+  margin-bottom: 8rpx;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }

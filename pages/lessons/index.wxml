@@ -3,7 +3,7 @@
 <view class="card-lesson">
   <image src="#">Subject icon</image>
   <view class="card-lesson-info">
-    <text>Subject</text>
-    <text>Lesson title</text>
+    <view class="subject">Subject</view>
+    <view class="title">Lesson title</view>
   </view>
 </view>
