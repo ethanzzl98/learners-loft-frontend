@@ -13,12 +13,7 @@ Page({
    * Lifecycle function--Called when page load
    */
   onLoad(options) {
-    const page = this;
-    if (app.globalData.header) {
-      page.getData()
-    } else {
-      wx.event.on('loginFinish', page, page.getData)
-    }
+    
   },
 
   getData() {
@@ -47,18 +42,12 @@ Page({
    * Lifecycle function--Called when page show
    */
   onShow: function () {
-    let page = this;
-    wx.request({
-      url: 'http://localhost:3000/api/v1/lessons',
-      method: "GET",
-      success(res) {
-        const lessons = res.data;
-        console.log(lessons)
-        page.setData({
-          lessons: lessons
-        })
-      }
-    })
+    const page = this;
+    if (app.globalData.header) {
+      page.getData()
+    } else {
+      wx.event.on('loginFinish', page, page.getData)
+    }
   },
 
   /**
