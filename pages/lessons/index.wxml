@@ -1,11 +1,11 @@
 <!--pages/lessons/index.wxml-->
 <view style="background-color: rgb(235,235,235); background-size: cover; height: 100vh; overflow-y: scroll;">
   <view class="header">Lessons</view>
-  <view class="card-lesson" wx:for="{{ lessons }}">
-    <!-- <image src="#">Subject icon</image> -->
+  <view class="card-lesson" bindtap="goToLesson" wx:for="{{data}}" data-id="{{item.id}}">
+    <image src="/images/index_lesson.png" class="pic">Subject icon</image>
     <view class="card-lesson-info">
-      <view class="subject">{{ item.subject }}</view>
-      <view class="title">Lesson title</view>
+      <view class="subject">{{item.subject}}</view>
+      <view class="title">{{item.title}}</view>
     </view>
   </view>
 </view>

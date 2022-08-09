@@ -13,24 +13,20 @@ Page({
    * Lifecycle function--Called when page load
    */
   onLoad(options) {
-    const page = this;
-    if (app.globalData.header) {
-      page.getData()
-    } else {
-      wx.event.on('loginFinish', page, page.getData)
-    }
+    
   },
 
   getData() {
-    const page = this
+    let page = this;
     wx.request({
-      url: `${app.globalData.baseUrl}/lessons`,
+      url: 'http://localhost:3000/api/v1/lessons',
       method: 'GET',
       header: app.globalData.header,
       success(res) {
-        console.log(res);
+        // console.log(res);
+        const lessons = res.data;
         page.setData({
-          lessons: res.data
+          data: lessons,
         })
       }
     })
@@ -46,8 +42,13 @@ Page({
   /**
    * Lifecycle function--Called when page show
    */
-  onShow() {
-
+  onShow: function () {
+    const page = this;
+    if (app.globalData.header) {
+      page.getData()
+    } else {
+      wx.event.on('loginFinish', page, page.getData)
+    }
   },
 
   /**
@@ -83,5 +84,12 @@ Page({
    */
   onShareAppMessage() {
 
+  },
+
+  goToLesson(e) {
+    const lesson = this.data[e.currentTarget.dataset.id]
+    wx.navigateTo({
+      url: `/pages/lessons/show?id=${e.currentTarget.dataset.id}`,
+    })
   }
 })

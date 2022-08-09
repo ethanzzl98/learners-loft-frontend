@@ -4,36 +4,37 @@
   justify-content: center;
   color: #7E0DF2;
   font-weight: 600;
-  font-size: larger;
+  font-size: x-large;
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-  margin-bottom: 10rpx;
-  margin-top: 10rpx;
+  margin-bottom: 20rpx;
+  margin-top: 20rpx;
 }
 
 .card-lesson {
   display: flex;
   align-items: center;
   background: white;
-  box-shadow: 0 0 16rpx rgb(1,1,1);
-  margin-bottom: 16rpx;
+  box-shadow: 0 0 8rpx rgb(1,1,1);
   border-radius: 10rpx;
-  border: 2rpx solid rgb(1,1,1);
-  margin: 0 8rpx;
+  border: 1rpx solid rgb(1,1,1);
+  height: 250rpx;
+  margin: 16rpx 10rpx;
 }
 
-.card-lesson image {
-  height: 200rpx;
-  width: 150rpx;
-  margin-right: 16rpx;
+.pic {
+  height: 128rpx;
+  width: 128rpx;
+  margin-left: 40rpx;
+  margin-top: 15rpx;
 }
 
 .card-lesson-info {
-  padding: 16rpx;
+  padding: 24rpx;
 }
 
 .subject {
   color: #F27E0D;
-  font-size: medium;
+  font-size: large;
   font-weight: 500;
   margin: 0;
   margin-bottom: 8rpx;
@@ -42,7 +43,7 @@
 
 .title {
   color: #F27E0D;
-  font-size: medium;
+  font-size: large;
   font-weight: 500;
   margin: 0;
   margin-bottom: 8rpx;
