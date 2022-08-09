@@ -1,7 +1,7 @@
 {
   "pages":[
-    "pages/lessons/show",
     "pages/lessons/index",
+    "pages/lessons/show",
     "pages/lessons/form",
     "pages/bookings/index"
   ],
