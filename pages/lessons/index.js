@@ -31,7 +31,8 @@ Page({
       url: 'http://localhost:3000/api/v1/lessons',
       method: "GET",
       success(res) {
-        const lessons = res.data.lessons;
+        const lessons = res.data;
+        console.log(lessons)
         page.setData({
           lessons: lessons
         })
