@@ -21,7 +21,7 @@
 
 .card-lesson image {
   width: 100%;
-  height: 300rpx;
+  height: 250rpx;
   object-fit: cover;
   border-bottom: 2rpx solid rgb(1,1,1);
 }
@@ -30,40 +30,46 @@
   display: flex;
   align-items: flex-end;
   justify-content: space-between;
-  padding: 8rpx;
+  padding: 10rpx;
 }
 
 .subject {
+  color: #F27E0D;
   font-size: medium;
-  color: rgb(85,98,115);
   font-weight: 500;
   margin: 0;
+  margin-bottom: 8rpx;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .timing {
+  color: #F27E0D;
   font-size: medium;
-  color: rgb(85,98,115);
   font-weight: 500;
   margin: 0;
+  margin-bottom: 8rpx;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .title {
+  color: #F27E0D;
   font-size: medium;
-  color: rgb(85,98,115);
   font-weight: 500;
   margin: 0;
+  margin-bottom: 8rpx;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 icon {
-  width: 80rpx;
-  height: 80rpx;
+  width: 100rpx;
+  height: 100rpx;
   border-radius: 150rpx;
   object-fit: cover;
   object-position: top;
   position: absolute;
   border: 2rpx solid black;
-  right: 8rpx;
-  top: 240rpx;
+  right: 10rpx;
+  top: 210rpx;
   box-shadow: 0 0 6rpx rgb(1,1,1);
-  background-color: red;
+  background-color: gray;
 }

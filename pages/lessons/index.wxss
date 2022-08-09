@@ -30,7 +30,7 @@
 }
 
 .subject {
-  color: #E1341E;
+  color: #F27E0D;
   font-size: medium;
   font-weight: 500;
   margin: 0;
@@ -39,7 +39,7 @@
 }
 
 .title {
-  color: #E1341E;
+  color: #F27E0D;
   font-size: medium;
   font-weight: 500;
   margin: 0;
