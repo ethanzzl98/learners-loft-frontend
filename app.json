@@ -4,12 +4,34 @@
     "pages/lessons/index",
     "pages/bookings/index"
   ],
+
   "window":{
     "backgroundTextStyle":"light",
     "navigationBarBackgroundColor": "#fff",
     "navigationBarTitleText": "Learners' Loft",
     "navigationBarTextStyle":"black"
   },
+  "tabBar": {
+  "color": "#F27E0D",
+  "selectedColor": "#7E0DF2",
+  "list": [{
+    "pagePath": "pages/lessons/index",
+    "text": "Lessons",
+    "iconPath": "images/lessons.png",
+    "selectedIconPath": "images/lessons_active.png"
+  }, {
+    "pagePath": "pages/lessons/form",
+    "text": "Add lesson",
+    "iconPath": "images/plus.png",
+    "selectedIconPath": "images/plus_active.png"
+  }, {
+    "pagePath": "pages/bookings/index",
+    "text": "Bookings",
+    "iconPath": "images/bookings.png",
+    "selectedIconPath": "images/bookings_active.png"
+  }]
+},
+
   "style": "v2",
   "sitemapLocation": "sitemap.json"
 }
