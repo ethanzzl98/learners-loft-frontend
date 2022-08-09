@@ -1,12 +1,14 @@
 {
   "pages":[
-    "pages/index/index",
-    "pages/logs/logs"
+    "pages/lessons/show",
+    "pages/lessons/index",
+    "pages/lessons/form",
+    "pages/bookings/index"
   ],
   "window":{
     "backgroundTextStyle":"light",
     "navigationBarBackgroundColor": "#fff",
-    "navigationBarTitleText": "Weixin",
+    "navigationBarTitleText": "Learners' Loft",
     "navigationBarTextStyle":"black"
   },
   "style": "v2",
