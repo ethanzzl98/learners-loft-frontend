@@ -1,5 +1,6 @@
 // pages/lessons/index.js
 const app = getApp()
+
 Page({
 
   /**
@@ -19,7 +20,7 @@ Page({
   getData() {
     const page = this
     wx.request({
-      url: `${app.globalData.baseUrl}/lessons`,
+      url: 'http://localhost:3000/api/v1/lessons',
       method: 'GET',
       header: app.globalData.header,
       success(res) {
