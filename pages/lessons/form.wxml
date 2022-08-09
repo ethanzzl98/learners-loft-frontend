@@ -3,7 +3,7 @@
 
 <!-- <view class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url('https://cdn.pixabay.com/photo/2017/07/15/22/07/library-2507902_1280.jpg')"></view> -->
 
-<choose-icons wx:if="{{showIconPicker}}" />
+
 
 <view class="main">
   <form bindsubmit="save">
@@ -31,30 +31,41 @@
 
   <view class="section">
   <!-- <view class="section__title">Start Date</view> -->
-  <picker mode="date" value="{{date}}" start="2022-08-01" end="2027-09-01" bindchange="bindStartDateChange">
-    <view class="picker">
+    <picker mode="date" value="{{date}}" start="2022-08-01" end="2027-09-01" bindchange="bindStartDateChange">
+      <view class="picker">
       Start Date: <text class="section-picker"> {{startDate}}</text>
-    </view>
-  </picker>
-</view>
+      </view>
+    </picker>
+  </view>
 
 <view class="section">
   <!-- <view class="section__title">Start Date</view> -->
-  <picker mode="date" value="{{date}}" start="2022-08-01" end="2027-09-01" bindchange="bindEndDateChange" >
+  <!-- <picker mode="date" value="{{date}}" start="2022-08-01" end="2027-09-01" bindchange="bindEndDateChange" >
     <view class="picker">
-      End Date: <text class="section-picker"> {{date}} </text>
+      End Date: <text class="section-picker"> {{endDate}} </text>
+    </view>
+  </picker> -->
+    <picker mode="time" value="{{time}}" start="01:00" end="23:59" bindchange="bindStartTimeChange">
+      <view class="picker">
+      Start Time: <text class="section-picker"> {{startTime}}</text>
+     </view>
+    </picker>
+
+  <picker mode="time" value="{{time}}" start="01:00" end="23:59" bindchange="bindEndTimeChange">
+    <view class="picker">
+      End Time: <text class="section-picker"> {{endTime}}</text>
     </view>
   </picker>
 </view>
 
-<view class="section">
+<!-- <view class="section">
   <!-- <view class="section__title">Time selector</view> -->
-  <picker mode="time" value="{{time}}" start="09:01" end="21:01" bindchange="bindTimeChange">
+  <!-- <picker mode="time" value="{{time}}" start="09:01" end="21:01" bindchange="bindTimeChange">
     <view class="picker">
     Time:  <text class="section-picker"> {{time}} </text>
     </view>
   </picker>
-</view>
+</view> --> 
 
   <view class="section-description">
     <!-- <view class="weui-cells__title">Lesson Description</view> -->
@@ -101,7 +112,7 @@
 
   </form>
 </view>
-
+<choose-icons wx:if="{{showIconPicker}}" />
 
 
 

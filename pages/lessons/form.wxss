@@ -37,6 +37,7 @@
   padding: 20rpx 20rpx;
   font-size: 40rpx;
   color: rgb(2, 2, 2);
+  display: flex;
 }
 
 .section-description {

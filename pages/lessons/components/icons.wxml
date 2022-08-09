@@ -1,5 +1,20 @@
 <!--pages/lessons/components/icons.wxml-->
+<view class="overlay"></view>
 <view class="wrapper">
 
+    <view class="content">
+      <view class="header">Add Icon</view>
+      <input class="header" type="text" name="header" />
+      
+      <view class="icon">
+        <!-- <view class="image" style="background-image: url('https://res.cloudinary.com/jerrytongshanghailewagon/image/upload/v1660039159/Learners%27%20Loft/music_owlene.png')">
+        </view> -->
+        <image src="https://res.cloudinary.com/jerrytongshanghailewagon/image/upload/v1660039159/Learners%27%20Loft/music_owlene.png"></image>
+        <image src="https://res.cloudinary.com/jerrytongshanghailewagon/image/upload/v1660039158/Learners%27%20Loft/sports-icon_wnwpaj.png"></image>
 
+        </view>
+
+      <!-- <view class="icon-card" src="({icon.image_url})">
+      </view> -->
+    </view>
 </view>

@@ -13,14 +13,19 @@ Page({
     this.setData({startDate: e.detail.value })
   },
 
-  bindEndDateChange(e) {
+  // bindEndDateChange(e) {
+  //   console.log(e)
+  //   this.setData({endDate: e.detail.value })
+  // },
+
+  bindStartTimeChange(e) {
     console.log(e)
-    this.setData({endDate: e.detail.value })
+    this.setData({startTime: e.detail.value })
   },
 
-  bindTimeChange(e) {
+  bindEndTimeChange(e) {
     console.log(e)
-    this.setData({time: e.detail.value })
+    this.setData({endTime: e.detail.value })
   },
 
   chooseIcon() {
