@@ -1,2 +1,9 @@
 <!--pages/bookings/index.wxml-->
-<text>pages/bookings/index.wxml</text>
+<view class="header">Bookings</view>
+<view class="card-booking">
+  <image src="#">Subject icon</image>
+  <view class="card-booking-info">
+    <text>Subject</text>
+    <text>Lesson title</text>
+  </view>
+</view>
