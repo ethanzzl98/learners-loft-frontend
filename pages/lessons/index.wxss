@@ -21,7 +21,7 @@
   margin: 0 8rpx;
 }
 
-.card-lesson image {
+.pic {
   height: 200rpx;
   width: 150rpx;
   margin-right: 16rpx;
