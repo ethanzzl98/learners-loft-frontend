@@ -12,7 +12,16 @@ Page({
    * Lifecycle function--Called when page load
    */
   onLoad(options) {
-
+    setTimeout(()=>{
+      wx.request({
+      url: `${app.globalData.baseUrl}/lessons`,
+      method: 'GET',
+      header: app.globalData.header,
+      success(res) {
+        console.log(res)
+      }
+    })
+    }, 1000);
   },
 
   /**

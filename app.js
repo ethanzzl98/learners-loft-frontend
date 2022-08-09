@@ -1,4 +1,6 @@
 // app.js
+import event from './utils/event'
+wx.event = event
 App({
   onLaunch() {
     // 展示本地存储能力
@@ -18,14 +20,15 @@ App({
           data: { code: res.code }, // pass code in request body
           success(loginRes) {
             console.log(loginRes) // { data: { headers: { "X-USER-TOKEN": <User Token> }, user: <User Object> }, ... }
+            app.globalData.user = loginRes.data.user // save in globalData, so we can use them throughout the MP
+            app.globalData.header = loginRes.data.headers
+            wx.event.emit('loginFinish')
           }
         })
       }
     })
   },
   globalData: {
-    header: null,
-    user: null,
     baseUrl: 'http://localhost:3000/api/v1',
   }
 })
