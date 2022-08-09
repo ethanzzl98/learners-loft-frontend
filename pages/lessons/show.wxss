@@ -1,0 +1,69 @@
+/* pages/lessons/show.wxss */
+.header {
+  display: flex;
+  justify-content: center;
+  color: rgb(0,134,249);
+  font-weight: 500;
+  font-size: larger;
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  margin-bottom: 10rpx;
+}
+
+.card-lesson {
+  background: whitesmoke;
+  box-shadow: 0 0 16rpx rgb(1,1,1);
+  margin: 0 8rpx;
+  border-radius: 6rpx;
+  border: 2rpx solid rgb(1,1,1);
+  overflow: hidden;
+  position: relative;
+}
+
+.card-lesson image {
+  width: 100%;
+  height: 300rpx;
+  object-fit: cover;
+  border-bottom: 2rpx solid rgb(1,1,1);
+}
+
+.card-lesson-info {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  padding: 8rpx;
+}
+
+.subject {
+  font-size: medium;
+  color: rgb(85,98,115);
+  font-weight: 500;
+  margin: 0;
+}
+
+.timing {
+  font-size: medium;
+  color: rgb(85,98,115);
+  font-weight: 500;
+  margin: 0;
+}
+
+.title {
+  font-size: medium;
+  color: rgb(85,98,115);
+  font-weight: 500;
+  margin: 0;
+}
+
+icon {
+  width: 80rpx;
+  height: 80rpx;
+  border-radius: 150rpx;
+  object-fit: cover;
+  object-position: top;
+  position: absolute;
+  border: 2rpx solid black;
+  right: 8rpx;
+  top: 240rpx;
+  box-shadow: 0 0 6rpx rgb(1,1,1);
+  background-color: red;
+}
