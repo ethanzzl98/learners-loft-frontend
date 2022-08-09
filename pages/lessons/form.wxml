@@ -14,7 +14,7 @@
     <!-- <view class="weui-cells__title">Subject</view> -->
     <view class="weui-cells weui-cells_after-title">
       <view class="weui-cell weui-cell_input">
-        <input class="weui-input" auto-focus placeholder="Subject"/>
+        <input class="weui-input" auto-focus placeholder="Subject" value="{{ subject }}"/>
       </view>
     </view>
   </view>
@@ -23,25 +23,25 @@
     <!-- <view class="weui-cells__title">Title</view> -->
     <view class="weui-cells weui-cells_after-title">
       <view class="weui-cell weui-cell_input">
-        <input class="weui-input" auto-focus placeholder="Title"/>
+        <input class="weui-input" auto-focus placeholder="Title" value="{{ title }}"/>
       </view>
     </view>
   </view>
 
   <view class="section">
   <!-- <view class="section__title">Start Date</view> -->
-  <picker mode="date" value="{{date}}" start="2015-09-01" end="2017-09-01" bindchange="bindDateChange">
+  <picker mode="date" value="{{ startDate }}" start="2015-09-01" end="2017-09-01" bindchange="bindDateChange">
     <view class="picker">
-      Start Date: {{date}}
+      Start Date: {{ startDate }}
     </view>
   </picker>
 </view>
 
 <view class="section">
   <!-- <view class="section__title">Start Date</view> -->
-  <picker mode="date" value="{{date}}" start="2015-09-01" end="2017-09-01" bindchange="bindDateChange">
+  <picker mode="date" value="{{ endDate }}" start="2015-09-01" end="2017-09-01" bindchange="bindDateChange">
     <view class="picker">
-      End Date: {{date}}
+      End Date: {{ endDate }}
     </view>
   </picker>
 </view>
@@ -50,7 +50,7 @@
     <!-- <view class="weui-cells__title">Lesson Description</view> -->
     <view class="weui-cells weui-cells_after-title">
       <view class="weui-cell weui-cell_input">
-        <input class="weui-input" auto-focus placeholder="Lesson Description"/>
+        <input class="weui-input" auto-focus placeholder="Lesson Description" value="description"/>
       </view>
     </view>
   </view>
@@ -68,7 +68,7 @@
     <button type="primary" form-type="submit">Save</button> -->
 
     <navigator class="btn btn-flat" url="/pages/lessons/show" open-type="switchTab">
-        <button style="background-color: #F27E0D">Save</button>
+        <button style="background-color: #F27E0D" bindtap="createLesson">Save</button>
     </navigator>
 
 

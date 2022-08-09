@@ -1,4 +1,5 @@
 // pages/lessons/form.js
+const app = getApp();
 Page({
 
   /**
@@ -6,6 +7,22 @@ Page({
    */
   data: {
 
+  },
+
+  createLesson() {
+    const page = this;
+    wx.request({
+      url: `${app.globalData.baseUrl}/create`,
+      method: 'POST',
+      data: {
+          subject: page.data.subject,
+          title: page.data.title,
+          startDate: page.data.startDate,
+          endDate: page.data.endDate,
+          description: page.data.description,
+          userId: app.globalData.user.id
+      }
+    })
   },
 
   /**
