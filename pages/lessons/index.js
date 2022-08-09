@@ -25,8 +25,18 @@ Page({
   /**
    * Lifecycle function--Called when page show
    */
-  onShow() {
-
+  onShow: function () {
+    let page = this;
+    wx.request({
+      url: 'http://localhost:3000/api/v1/lessons',
+      method: "GET",
+      success(res) {
+        const lessons = res.data.lessons;
+        page.setData({
+          lessons: lessons
+        })
+      }
+    })
   },
 
   /**
