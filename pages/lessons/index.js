@@ -84,5 +84,12 @@ Page({
    */
   onShareAppMessage() {
 
+  },
+
+  goToLesson(e) {
+    const lesson = this.data[e.currentTarget.dataset.id]
+    wx.navigateTo({
+      url: `/pages/lessons/show?id=${e.currentTarget.dataset.id}`,
+    })
   }
 })
