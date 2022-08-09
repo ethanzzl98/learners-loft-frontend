@@ -13,6 +13,13 @@
           "query": "",
           "launchMode": "default",
           "scene": null
+        },
+        {
+          "name": "",
+          "pathName": "pages/lessons/form",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
         }
       ]
     }

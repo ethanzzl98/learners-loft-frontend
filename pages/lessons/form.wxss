@@ -1,1 +1,44 @@
 /* pages/lessons/form.wxss */
+
+.header {
+  display: flex;
+  justify-content: center;
+  color: #7E0DF2;
+  font-weight: 600;
+  font-size: larger;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  margin-bottom: 10rpx;
+}
+
+/* .enter {
+  border: solid 1px rgb(8, 8, 8);
+  margin-top: 50rpx;
+  margin-bottom: 50rpx;
+  padding: 20rpx 40rpx;
+  font-size: 40rpx;
+  color: rgb(2, 2, 2);
+} */
+
+.section {
+  border: solid 1px rgb(8, 8, 8);
+  margin-top: 50rpx;
+  margin-bottom: 50rpx;
+  margin-left: 20rpx;
+  margin-right: 20rpx;
+  padding: 20rpx 20rpx;
+  font-size: 40rpx;
+  color: rgb(2, 2, 2);
+}
+
+.main button
+{
+  border-radius: 25px;
+  bottom: 5px;
+  color: white;
+  padding: 10rpx 20rpx;
+  margin-top: 50rpx;
+  margin-bottom: 50rpx;
+  text-shadow: 4rpx 4rpx black;
+  box-shadow: 0 0 16rpx rgb(1,1,1)
+}
+  

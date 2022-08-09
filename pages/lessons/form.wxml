@@ -1,2 +1,72 @@
 <!--pages/lessons/form.wxml-->
-<text>pages/lessons/form.wxml</text>
+<!-- <text>pages/lessons/form.wxml</text> -->
+<view class="main">
+  <form bindsubmit="save">
+    <view class="header">Add Lessons</view>
+    <input class="header" type="text" name="header" />
+
+
+  <view class="section">
+    <view class="weui-cells__title">Subject</view>
+    <view class="weui-cells weui-cells_after-title">
+      <view class="weui-cell weui-cell_input">
+        <input class="weui-input" auto-focus placeholder="Enter Subject"/>
+      </view>
+    </view>
+  </view>
+
+  <view class="section">
+    <view class="weui-cells__title">Title</view>
+    <view class="weui-cells weui-cells_after-title">
+      <view class="weui-cell weui-cell_input">
+        <input class="weui-input" auto-focus placeholder="Enter Title"/>
+      </view>
+    </view>
+  </view>
+
+  <view class="section">
+    <view class="weui-cells__title">Start Date</view>
+    <view class="weui-cells weui-cells_after-title">
+      <view class="weui-cell weui-cell_input">
+        <input class="weui-input" auto-focus placeholder="Enter Start Date"/>
+      </view>
+    </view>
+  </view>
+
+  <view class="section">
+    <view class="weui-cells__title">End Date</view>
+    <view class="weui-cells weui-cells_after-title">
+      <view class="weui-cell weui-cell_input">
+        <input class="weui-input" auto-focus placeholder="Enter End Date"/>
+      </view>
+    </view>
+  </view>
+
+  <view class="section">
+    <view class="weui-cells__title">Lesson Description</view>
+    <view class="weui-cells weui-cells_after-title">
+      <view class="weui-cell weui-cell_input">
+        <input class="weui-input" auto-focus placeholder="Enter Lesson Description"/>
+      </view>
+    </view>
+  </view>
+
+  <view class="section">
+  <view class="section__title">Choose Icon</view>
+  <picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}">
+    <view class="picker">
+      Current selection: {{array[index]}}
+    </view>
+  </picker>
+</view>
+   
+<!-- 
+    <button type="primary" form-type="submit">Save</button> -->
+
+    <navigator class="btn btn-flat" url="/pages/lessons/show" open-type="switchTab">
+        <button style="background-color: #F27E0D">Save</button>
+    </navigator>
+
+
+  </form>
+</view>
