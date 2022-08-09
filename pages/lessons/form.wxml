@@ -1,5 +1,9 @@
 <!--pages/lessons/form.wxml-->
 <!-- <text>pages/lessons/form.wxml</text> -->
+
+<!-- <view class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url('https://cdn.pixabay.com/photo/2017/07/15/22/07/library-2507902_1280.jpg')"></view> -->
+
+
 <view class="main">
   <form bindsubmit="save">
     <view class="header">Add Lessons</view>
@@ -7,58 +11,58 @@
 
 
   <view class="section">
-    <view class="weui-cells__title">Subject</view>
+    <!-- <view class="weui-cells__title">Subject</view> -->
     <view class="weui-cells weui-cells_after-title">
       <view class="weui-cell weui-cell_input">
-        <input class="weui-input" auto-focus placeholder="Enter Subject"/>
+        <input class="weui-input" auto-focus placeholder="Subject"/>
       </view>
     </view>
   </view>
 
   <view class="section">
-    <view class="weui-cells__title">Title</view>
+    <!-- <view class="weui-cells__title">Title</view> -->
     <view class="weui-cells weui-cells_after-title">
       <view class="weui-cell weui-cell_input">
-        <input class="weui-input" auto-focus placeholder="Enter Title"/>
+        <input class="weui-input" auto-focus placeholder="Title"/>
       </view>
     </view>
   </view>
 
   <view class="section">
-    <view class="weui-cells__title">Start Date</view>
+  <!-- <view class="section__title">Start Date</view> -->
+  <picker mode="date" value="{{date}}" start="2015-09-01" end="2017-09-01" bindchange="bindDateChange">
+    <view class="picker">
+      Start Date: {{date}}
+    </view>
+  </picker>
+</view>
+
+<view class="section">
+  <!-- <view class="section__title">Start Date</view> -->
+  <picker mode="date" value="{{date}}" start="2015-09-01" end="2017-09-01" bindchange="bindDateChange">
+    <view class="picker">
+      End Date: {{date}}
+    </view>
+  </picker>
+</view>
+
+  <view class="section-description">
+    <!-- <view class="weui-cells__title">Lesson Description</view> -->
     <view class="weui-cells weui-cells_after-title">
       <view class="weui-cell weui-cell_input">
-        <input class="weui-input" auto-focus placeholder="Enter Start Date"/>
+        <input class="weui-input" auto-focus placeholder="Lesson Description"/>
       </view>
     </view>
   </view>
 
-  <view class="section">
-    <view class="weui-cells__title">End Date</view>
-    <view class="weui-cells weui-cells_after-title">
-      <view class="weui-cell weui-cell_input">
-        <input class="weui-input" auto-focus placeholder="Enter End Date"/>
-      </view>
-    </view>
-  </view>
-
-  <view class="section">
-    <view class="weui-cells__title">Lesson Description</view>
-    <view class="weui-cells weui-cells_after-title">
-      <view class="weui-cell weui-cell_input">
-        <input class="weui-input" auto-focus placeholder="Enter Lesson Description"/>
-      </view>
-    </view>
-  </view>
-
-  <view class="section">
+  <!-- <view class="section">
   <view class="section__title">Choose Icon</view>
   <picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}">
     <view class="picker">
       Current selection: {{array[index]}}
     </view>
   </picker>
-</view>
+</view> -->
    
 <!-- 
     <button type="primary" form-type="submit">Save</button> -->
