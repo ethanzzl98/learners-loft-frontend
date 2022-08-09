@@ -1,15 +1,4 @@
 /* pages/lessons/index.wxss */
-.header {
-  display: flex;
-  justify-content: center;
-  color: #7E0DF2;
-  font-weight: 600;
-  font-size: x-large;
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-  margin-bottom: 20rpx;
-  margin-top: 20rpx;
-}
-
 .card-lesson {
   display: flex;
   align-items: center;
@@ -35,7 +24,7 @@
 .subject {
   color: #F27E0D;
   font-size: large;
-  font-weight: 500;
+  font-weight: 600;
   margin: 0;
   margin-bottom: 8rpx;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;

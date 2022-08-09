@@ -8,3 +8,14 @@
   padding: 200rpx 0;
   box-sizing: border-box;
 } 
+
+.header {
+  display: flex;
+  justify-content: center;
+  color: #7E0DF2;
+  font-weight: 600;
+  font-size: x-large;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  margin-bottom: 20rpx;
+  margin-top: 20rpx;
+}
