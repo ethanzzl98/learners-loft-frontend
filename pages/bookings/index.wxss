@@ -5,17 +5,17 @@
   color: #7E0DF2;
   font-weight: 600;
   font-size: larger;
-  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   margin-bottom: 10rpx;
 }
 
 .card-booking {
   display: flex;
   align-items: center;
-  background: whitesmoke;
+  background: white;
   box-shadow: 0 0 16rpx rgb(1,1,1);
   margin-bottom: 16rpx;
-  border-radius: 6rpx;
+  border-radius: 10rpx;
   border: 2rpx solid rgb(1,1,1);
   margin: 0 8rpx;
 }

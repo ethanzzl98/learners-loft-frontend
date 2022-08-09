@@ -12,16 +12,17 @@
 .card-lesson {
   display: flex;
   align-items: center;
-  background: whitesmoke;
+  background: white;
   box-shadow: 0 0 16rpx rgb(1,1,1);
   margin-bottom: 16rpx;
-  border-radius: 6rpx;
+  border-radius: 10rpx;
   border: 2rpx solid rgb(1,1,1);
   margin: 0 8rpx;
 }
 
 .card-lesson image {
   height: 200rpx;
+  width: 150rpx;
   margin-right: 16rpx;
 }
 

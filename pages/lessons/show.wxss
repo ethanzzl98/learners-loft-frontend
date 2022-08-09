@@ -13,7 +13,7 @@
   background: white;
   box-shadow: 0 0 16rpx rgb(1,1,1);
   margin: 0 8rpx;
-  border-radius: 6rpx;
+  border-radius: 10rpx;
   border: 2rpx solid rgb(1,1,1);
   overflow: hidden;
   position: relative;
