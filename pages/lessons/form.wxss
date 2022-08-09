@@ -51,21 +51,28 @@
   height: 200rpx;
 }
 
+.section-picker {
+  /* border: solid 1px rgb(8, 8, 8); */
+  margin-top: 50rpx;
+  margin-bottom: 50rpx;
+  margin-left: 20rpx;
+  margin-right: 20rpx;
+  padding: 20rpx 20rpx;
+  font-size: 40rpx;
+  color: rgb(2, 2, 2);
+}
+
 .picker {
   color: rgb(112, 108, 108);
 }
 
-.main button
-{
-  border-radius: 50rpx;
-  bottom: 5px;
-  color: white;
-  padding: 10rpx 20rpx;
-  margin-top: 100rpx;
-  margin-bottom: 50rpx;
-  text-shadow: 2rpx 2rpx black;
-  box-shadow: 0 0 2rpx rgb(1,1,1)
+.section image {
+  height: 100rpx;
+  width: 100rpx;
+  margin-top: 10rpx;
 }
+
+
 
 /* .main {
   background-image:  url('https://cdn.pixabay.com/photo/2017/07/15/22/07/library-2507902_1280.jpg');

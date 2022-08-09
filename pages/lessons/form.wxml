@@ -3,6 +3,7 @@
 
 <!-- <view class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url('https://cdn.pixabay.com/photo/2017/07/15/22/07/library-2507902_1280.jpg')"></view> -->
 
+<choose-icons wx:if="{{showIconPicker}}" />
 
 <view class="main">
   <form bindsubmit="save">
@@ -30,18 +31,27 @@
 
   <view class="section">
   <!-- <view class="section__title">Start Date</view> -->
-  <picker mode="date" value="{{date}}" start="2015-09-01" end="2017-09-01" bindchange="bindDateChange">
+  <picker mode="date" value="{{date}}" start="2022-08-01" end="2027-09-01" bindchange="bindStartDateChange">
     <view class="picker">
-      Start Date: {{date}}
+      Start Date: <text class="section-picker"> {{startDate}}</text>
     </view>
   </picker>
 </view>
 
 <view class="section">
   <!-- <view class="section__title">Start Date</view> -->
-  <picker mode="date" value="{{date}}" start="2015-09-01" end="2017-09-01" bindchange="bindDateChange">
+  <picker mode="date" value="{{date}}" start="2022-08-01" end="2027-09-01" bindchange="bindEndDateChange" >
     <view class="picker">
-      End Date: {{date}}
+      End Date: <text class="section-picker"> {{date}} </text>
+    </view>
+  </picker>
+</view>
+
+<view class="section">
+  <!-- <view class="section__title">Time selector</view> -->
+  <picker mode="time" value="{{time}}" start="09:01" end="21:01" bindchange="bindTimeChange">
+    <view class="picker">
+    Time:  <text class="section-picker"> {{time}} </text>
     </view>
   </picker>
 </view>
@@ -53,6 +63,23 @@
         <input class="weui-input" auto-focus placeholder="Lesson Description"/>
       </view>
     </view>
+  </view>
+
+  <view class="section">
+    <!-- <view class="weui-cells__title">Subject</view> -->
+    <!-- <view class="weui-cells weui-cells_after-title">
+      <view class="weui-cell weui-cell_input">
+        <input class="weui-input" auto-focus/>
+        <view class="tap-icon">
+          <!-- <view wx:for="{{icons}}" wx:for-item="icon" bindTap="goToIcon" data-index="{{index}}" class="icon-image" style="background-image: url('https://cdn-icons-png.flaticon.com/512/44/44289.png')"></view> -->
+          <!-- <image src="https://cdn-icons-png.flaticon.com/512/44/44289.png" wx:for="{{icons}}" wx:for-item="icon" bindTap="chooseIcon" data-index="{{index}}" class="icon-image"></image>
+        </view> --> 
+        <!-- <view> style="background-image" </view> -->
+        <!-- <button type="primary" bindtap="chooseIcon">Choose Icon</button> -->
+        <input class="weui-input" auto-focus placeholder="Choose icon"/>
+        <image  src="https://cdn-icons-png.flaticon.com/512/44/44289.png" bindtap="chooseIcon"></image>
+      <!-- </view> -->
+    <!-- </view> -->
   </view>
 
   <!-- <view class="section">
@@ -67,10 +94,14 @@
 <!-- 
     <button type="primary" form-type="submit">Save</button> -->
 
-    <navigator class="btn btn-flat" url="/pages/lessons/show" open-type="switchTab">
-        <button style="background-color: #F27E0D">Save</button>
-    </navigator>
+    <!-- <navigator class="" url="/pages/lessons/show" open-type="switchTab"> -->
+        <button class="btn-primary">Save</button>
+    <!-- </navigator> -->
 
 
   </form>
 </view>
+
+
+
+

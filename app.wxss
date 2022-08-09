@@ -8,3 +8,15 @@
   padding: 200rpx 0;
   box-sizing: border-box;
 } 
+
+.btn-primary {
+  border-radius: 50rpx;
+  bottom: 5px;
+  color: white;
+  padding: 10rpx 20rpx;
+  margin-top: 100rpx;
+  margin-bottom: 50rpx;
+  text-shadow: 2rpx 2rpx black;
+  box-shadow: 0 0 2rpx rgb(1,1,1);
+  background-color: #F27E0D;
+}
