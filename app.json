@@ -1,7 +1,8 @@
 {
   "pages":[
     "pages/lessons/show",
-    "pages/lessons/index"
+    "pages/lessons/index",
+    "pages/lessons/form"
   ],
   "window":{
     "backgroundTextStyle":"light",
