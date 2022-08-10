@@ -20,6 +20,33 @@
   font-size: large;
   font-weight: 600;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+}
+
+.description {
+  height: 150rpx;
+  border: 1rpx solid rgb(1,1,1);
+  margin: 16rpx 0;
+  border-radius: 10rpx;
+  box-shadow: 0 0 4rpx rgb(1,1,1);
+  text-align:left;
+  padding: 10rpx;
+  color: #F27E0D;
+  font-size: large;
+  font-weight: 600;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  padding-left: 30rpx;
+}
+
+.pic {
+  height: 64rpx;
+  width: 64rpx;
+  margin: 0 20rpx;
 }
 
 .buttons {
