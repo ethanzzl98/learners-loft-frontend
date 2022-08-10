@@ -32,20 +32,29 @@ Page({
     const page = this;
     const id = e.currentTarget.dataset.id;
     const index = e.currentTarget.dataset.index;
-    // wx.request({
-    //   url: `${app.globalData.baseUrl}/booking/${id}`
-    // })
-    wx.request({
-      url: `${app.globalData.baseUrl}/bookings/${id}`,
-      method: 'DELETE',
-      header: app.globalData.header,
+    wx.showModal({
+      title: 'Are you sure?',
+      confirmText: 'Yes',
+      confirmColor: 'green',
+      cancelText: 'No',
+      cancelColor: 'red',
       success(res) {
-        let bookings = page.data.bookings
-        bookings.splice(index, 1)
-        page.setData({ bookings: bookings})
+        if (res.confirm) {
+          wx.request({
+            url: `${app.globalData.baseUrl}/bookings/${id}`,
+            method: 'DELETE',
+            header: app.globalData.header,
+            success(res) {
+              let bookings = page.data.bookings
+              bookings.splice(index, 1)
+              page.setData({ bookings: bookings})
+            }
+          })
+        }
       }
     })
   },
+  
   /**
    * Lifecycle function--Called when page is initially rendered
    */
