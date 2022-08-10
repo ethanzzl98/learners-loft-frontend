@@ -19,8 +19,9 @@ Page({
       method: 'GET',
       header: app.globalData.header,
       success(res) {
-        console.log('get all booking')
-        console.log(res);
+        console.log('get all bookings')
+        console.log(res.data);
+        page.setData({bookings: res.data.bookings})
       }
     })
   },
