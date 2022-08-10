@@ -1,4 +1,5 @@
 // pages/lessons/index.js
+const app = getApp()
 Page({
 
   /**
@@ -12,7 +13,23 @@ Page({
    * Lifecycle function--Called when page load
    */
   onLoad(options) {
+    
+  },
 
+  getData() {
+    let page = this;
+    wx.request({
+      url: 'http://localhost:3000/api/v1/lessons',
+      method: 'GET',
+      header: app.globalData.header,
+      success(res) {
+        // console.log(res);
+        const lessons = res.data;
+        page.setData({
+          data: lessons,
+        })
+      }
+    })
   },
 
   /**
@@ -25,8 +42,13 @@ Page({
   /**
    * Lifecycle function--Called when page show
    */
-  onShow() {
-
+  onShow: function () {
+    const page = this;
+    if (app.globalData.header) {
+      page.getData()
+    } else {
+      wx.event.on('loginFinish', page, page.getData)
+    }
   },
 
   /**
@@ -62,5 +84,12 @@ Page({
    */
   onShareAppMessage() {
 
+  },
+
+  goToLesson(e) {
+    const lesson = this.data[e.currentTarget.dataset.id]
+    wx.navigateTo({
+      url: `/pages/lessons/show?id=${e.currentTarget.dataset.id}`,
+    })
   }
 })
