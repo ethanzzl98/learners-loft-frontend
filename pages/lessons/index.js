@@ -8,10 +8,6 @@ Page({
   data: {
 
   },
-
-  /**
-   * Lifecycle function--Called when page load
-   */
   onLoad(options) {
     
   },
