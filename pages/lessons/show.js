@@ -1,4 +1,5 @@
 // pages/lessons/show.js
+const app = getApp();
 Page({
 
   /**
@@ -8,6 +9,11 @@ Page({
 
   },
 
+  bookLesson() {
+    wx.request({
+      url: `${app.globalData.baseUrl}`,
+    })
+  },
   /**
    * Lifecycle function--Called when page load
    */

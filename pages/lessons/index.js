@@ -19,7 +19,7 @@ Page({
   getData() {
     let page = this;
     wx.request({
-      url: 'http://localhost:3000/api/v1/lessons',
+      url: `${app.globalData.baseUrl}/lessons`,
       method: 'GET',
       header: app.globalData.header,
       success(res) {

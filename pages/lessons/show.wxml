@@ -6,7 +6,7 @@
   <view class="title">Lesson Title</view>
   <view class="time">Time</view>
   <view class="buttons">
-    <button class="btn-book">Book</button>
+    <button class="btn-book" bindtap="bookLesson">Book</button>
     <button class="btn-delete">Delete</button>
     <button class="btn-edit">Edit</button>
   </view>
