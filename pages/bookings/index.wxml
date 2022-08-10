@@ -7,5 +7,6 @@
       <view class="subject">{{item.lesson.subject}}</view>
       <view class="title">{{item.lesson.title}}</view>
     </view>
+    <button bindtap="deleteBooking" data-id="item.id">Delete</button>
   </view>
 </view>

@@ -26,6 +26,16 @@ Page({
     })
   },
 
+  deleteBooking() {
+    this.deleteConfirmed()
+  },
+
+  deleteConfirmed() {
+    const page = this;
+    wx.request({
+      url: `${app.globalData.baseUrl}`
+    })
+  },
   /**
    * Lifecycle function--Called when page is initially rendered
    */
