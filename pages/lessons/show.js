@@ -11,7 +11,11 @@ Page({
 
   bookLesson() {
     wx.request({
-      url: `${app.globalData.baseUrl}`,
+      url: `${app.globalData.baseUrl}/bookings`,
+      method: 'POST',
+      body: {
+        user_id: 
+      }
     })
   },
   /**

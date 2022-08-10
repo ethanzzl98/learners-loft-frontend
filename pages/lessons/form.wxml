@@ -15,7 +15,7 @@
     <!-- <view class="weui-cells__title">Subject</view> -->
     <view class="weui-cells weui-cells_after-title">
       <view class="weui-cell weui-cell_input">
-        <input class="weui-input" auto-focus placeholder="Subject"/>
+        <input class="weui-input" auto-focus placeholder="Subject" model:value="{{ subject }}"/>
       </view>
     </view>
   </view>
@@ -24,13 +24,14 @@
     <!-- <view class="weui-cells__title">Title</view> -->
     <view class="weui-cells weui-cells_after-title">
       <view class="weui-cell weui-cell_input">
-        <input class="weui-input" auto-focus placeholder="Title"/>
+        <input class="weui-input" auto-focus placeholder="Title" model:value="{{ title }}"/>
       </view>
     </view>
   </view>
 
   <view class="section">
   <!-- <view class="section__title">Start Date</view> -->
+<<<<<<< HEAD
     <picker mode="date" value="{{date}}" start="2022-08-01" end="2027-09-01" bindchange="bindStartDateChange">
       <view class="picker">
       Start Date: <text class="section-picker"> {{startDate}}</text>
@@ -54,15 +55,28 @@
   <picker mode="time" value="{{time}}" start="01:00" end="23:59" bindchange="bindEndTimeChange">
     <view class="picker">
       End Time: <text class="section-picker"> {{endTime}}</text>
+=======
+  <picker mode="date" model:value="{{ startDate }}" start="2015-09-01" end="2017-09-01">
+    <view class="picker">
+      Start Date: {{ startDate }}
+>>>>>>> auth
     </view>
   </picker>
 </view>
 
+<<<<<<< HEAD
 <!-- <view class="section">
   <!-- <view class="section__title">Time selector</view> -->
   <!-- <picker mode="time" value="{{time}}" start="09:01" end="21:01" bindchange="bindTimeChange">
     <view class="picker">
     Time:  <text class="section-picker"> {{time}} </text>
+=======
+<view class="section">
+  <!-- <view class="section__title">Start Date</view> -->
+  <picker mode="date" model:value="{{ endDate }}" start="2015-09-01" end="2017-09-01" bindchange="bindDateChange">
+    <view class="picker">
+      End Date: {{ endDate }}
+>>>>>>> auth
     </view>
   </picker>
 </view> --> 
@@ -71,7 +85,7 @@
     <!-- <view class="weui-cells__title">Lesson Description</view> -->
     <view class="weui-cells weui-cells_after-title">
       <view class="weui-cell weui-cell_input">
-        <input class="weui-input" auto-focus placeholder="Lesson Description"/>
+        <input class="weui-input" auto-focus placeholder="Lesson Description" model:value="{{ description }}"/>
       </view>
     </view>
   </view>
@@ -105,10 +119,17 @@
 <!-- 
     <button type="primary" form-type="submit">Save</button> -->
 
+<<<<<<< HEAD
     <!-- <navigator class="" url="/pages/lessons/show" open-type="switchTab"> -->
         <button class="btn-primary">Save</button>
     <!-- </navigator> -->
 
+=======
+    <navigator class="btn btn-flat" url="/pages/lessons/show" open-type="switchTab">
+        <button style="background-color: #F27E0D" bindtap="createLesson">Save</button>
+    </navigator>
+    <button bindtap="testPost">Test</button>
+>>>>>>> auth
 
   </form>
 </view>
