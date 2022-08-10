@@ -2,12 +2,22 @@
 <view style="background-color: rgba(243,126,34,.4); background-image: linear-gradient(135deg, rgba(243,126,34,.4) 65%, rgba(125,18,238,.5) 100%); background-size: cover; height: 100vh; overflow-y: scroll;">
   <view class="header">Lesson details</view>
   <view class="picture" style="background-image: url(/images/show_lesson.jpeg); background-size: cover;"></view>
-  <view class="subject">Subject</view>
-  <view class="title">Lesson Title</view>
-  <view class="time">Time</view>
+  <view class="subject">
+    <image class="pic" src="/images/subject.png"></image>
+    <text>{{lesson.subject}}</text>
+  </view>
+  <view class="title">
+    <image class="pic" src="/images/title.png"></image>
+    <text>{{lesson.title}}</text>
+  </view>
+  <view class="time">
+    <image class="pic" src="/images/time.png"></image>
+    <text>{{lesson.start_time}} - {{lesson.end_time}}</text>
+  </view>
+  <view class="description">{{lesson.description}}!</view>
   <view class="buttons">
     <button class="btn-book" bindtap="bookLesson">Book</button>
-    <button class="btn-delete">Delete</button>
-    <button class="btn-edit">Edit</button>
+    <button class="btn-delete" bindtap="deleteLesson">Delete</button>
+    <button class="btn-edit" bindtap="editLesson">Edit</button>
   </view>
 </view>

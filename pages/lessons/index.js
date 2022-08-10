@@ -23,7 +23,6 @@ Page({
       method: 'GET',
       header: app.globalData.header,
       success(res) {
-        // console.log(res);
         const lessons = res.data;
         page.setData({
           data: lessons,
@@ -87,7 +86,7 @@ Page({
   },
 
   goToLesson(e) {
-    const lesson = this.data[e.currentTarget.dataset.id]
+    // debugger
     wx.navigateTo({
       url: `/pages/lessons/show?id=${e.currentTarget.dataset.id}`,
     })

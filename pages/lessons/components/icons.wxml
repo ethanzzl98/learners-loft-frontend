@@ -3,16 +3,37 @@
 <view class="wrapper">
 
     <view class="content">
-      <view class="header">Add Icon</view>
-      <input class="header" type="text" name="header" />
+      <view class="header">Click Icon to select</view>
       
       <view class="icon">
-        <!-- <view class="image" style="background-image: url('https://res.cloudinary.com/jerrytongshanghailewagon/image/upload/v1660039159/Learners%27%20Loft/music_owlene.png')">
-        </view> -->
-        <image src="https://res.cloudinary.com/jerrytongshanghailewagon/image/upload/v1660039159/Learners%27%20Loft/music_owlene.png"></image>
-        <image src="https://res.cloudinary.com/jerrytongshanghailewagon/image/upload/v1660039158/Learners%27%20Loft/sports-icon_wnwpaj.png"></image>
+        <image wx:for="{{icons}}" src="{{item}}" bindtap="choose" data-index="{{index}}" mode="widthFix"></image>
+          <!-- <view class="image" style="background-image: url('https://res.cloudinary.com/jerrytongshanghailewagon/image/upload/v1660039159/Learners%27%20Loft/music_owlene.png')">
+          </view> -->
+          <!-- <image src="https://res.cloudinary.com/jerrytongshanghailewagon/image/upload/v1660039159/Learners%27%20Loft/music_owlene.png"></image>
 
-        </view>
+          <image src="https://res.cloudinary.com/jerrytongshanghailewagon/image/upload/v1660039158/Learners%27%20Loft/sports-icon_wnwpaj.png"></image>
+
+        <image src=" https://res.cloudinary.com/jerrytongshanghailewagon/image/upload/v1660039158/Learners%27%20Loft/languages_fh9zqs.png"></image>
+
+        <image src="https://res.cloudinary.com/jerrytongshanghailewagon/image/upload/v1660039158/Learners%27%20Loft/photography_bn9yzf.png"></image>
+
+        <image src="https://res.cloudinary.com/jerrytongshanghailewagon/image/upload/v1660039157/Learners%27%20Loft/training_zwi04j.png"></image>
+
+        <image src="https://res.cloudinary.com/jerrytongshanghailewagon/image/upload/v1660039157/Learners%27%20Loft/philosophy_ryobmb.png"></image>
+
+        <image src="https://res.cloudinary.com/jerrytongshanghailewagon/image/upload/v1660039157/Learners%27%20Loft/math_ctcvn5.png"></image>
+
+        <image src="https://res.cloudinary.com/jerrytongshanghailewagon/image/upload/v1660039157/Learners%27%20Loft/history_hmm2sx.png"></image>
+
+        <image src="https://res.cloudinary.com/jerrytongshanghailewagon/image/upload/v1660039157/Learners%27%20Loft/geography_gmyepp.png"></image>
+
+        <image src="https://res.cloudinary.com/jerrytongshanghailewagon/image/upload/v1660039156/Learners%27%20Loft/biology_f0omda.png"></image>
+
+        <image src="https://res.cloudinary.com/jerrytongshanghailewagon/image/upload/v1660039156/Learners%27%20Loft/coding_ymslc3.png"></image>
+
+        <image src="https://res.cloudinary.com/jerrytongshanghailewagon/image/upload/v1660099309/Learners%27%20Loft/cooking_dqc6vv.png"></image> -->
+
+      </view>
 
       <!-- <view class="icon-card" src="({icon.image_url})">
       </view> -->

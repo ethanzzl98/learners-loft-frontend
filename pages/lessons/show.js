@@ -1,5 +1,5 @@
 // pages/lessons/show.js
-const app = getApp();
+const app = getApp()
 Page({
 
   /**
@@ -25,8 +25,20 @@ Page({
   /**
    * Lifecycle function--Called when page load
    */
-  onLoad(options) {
-    
+  onLoad: function (options) {
+    let page = this;
+    wx.request({
+      url: `${app.globalData.baseUrl}/lessons/${options.id}`,
+      method: "GET",
+      header: app.globalData.header,
+      success(res) {
+        // console.log({res})
+        const lesson = res.data;
+        page.setData(
+          {lesson}
+        )
+      }
+    })
   },
 
   /**
