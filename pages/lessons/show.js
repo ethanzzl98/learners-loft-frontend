@@ -14,11 +14,28 @@ Page({
   bookLesson() {
     const page = this;
     wx.request({
-      url: `${app.globalData.baseUrl}/lessons/${page.data.lesson.id}/bookings`,
+      url: `${app.globalData.baseUrl}/lessons/${page.data.id}/bookings`,
       method: 'POST',
       header: app.globalData.header,
       success(res) {
         console.log(res)
+      }
+    })
+  },
+
+  deleteLesson() {
+    this.deleteConfirmed()
+  },
+
+  deleteConfirmed() {
+    const page = this;
+    wx.request({
+      url: `${app.globalData.baseUrl}/lessons/${page.data.id}`,
+      method: "DELETE",
+      header: app.globalData.header,
+      success(res) {
+        console.log(res);
+        wx.navigateBack();
       }
     })
   },
@@ -34,9 +51,10 @@ Page({
       success(res) {
         // console.log({res})
         const lesson = res.data;
-        page.setData(
-          {lesson}
-        )
+        page.setData({
+            lesson: lesson,
+            id: options.id
+        })
       }
     })
   },
