@@ -3,27 +3,28 @@
   display: flex;
   align-items: center;
   background: white;
-  box-shadow: 0 0 16rpx rgb(1,1,1);
-  margin-bottom: 16rpx;
+  box-shadow: 0 0 8rpx rgb(1,1,1);
   border-radius: 10rpx;
-  border: 2rpx solid rgb(1,1,1);
-  margin: 0 8rpx;
+  border: 1rpx solid rgb(1,1,1);
+  height: 250rpx;
+  margin: 16rpx 10rpx;
 }
 
-.card-booking image {
-  height: 200rpx;
-  width: 150rpx;
-  margin-right: 16rpx;
+.pic {
+  height: 128rpx;
+  width: 128rpx;
+  margin-left: 40rpx;
+  margin-top: 15rpx;
 }
 
 .card-booking-info {
-  padding: 16rpx;
+  padding: 24rpx;
 }
 
 .subject {
   color: #F27E0D;
-  font-size: medium;
-  font-weight: 500;
+  font-size: large;
+  font-weight: 600;
   margin: 0;
   margin-bottom: 8rpx;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -31,7 +32,16 @@
 
 .title {
   color: #F27E0D;
-  font-size: medium;
+  font-size: large;
+  font-weight: 500;
+  margin: 0;
+  margin-bottom: 8rpx;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.time {
+  color: #F27E0D;
+  font-size: large;
   font-weight: 500;
   margin: 0;
   margin-bottom: 8rpx;
