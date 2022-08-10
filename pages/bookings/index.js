@@ -13,9 +13,39 @@ Page({
    * Lifecycle function--Called when page load
    */
   onLoad(options) {
-    
+    let page = this;
+    wx.request({
+      url: `${app.globalData.baseUrl}/bookings`,
+      method: 'GET',
+      header: app.globalData.header,
+      success(res) {
+        page.setData({bookings: res.data.bookings})
+      }
+    })
   },
 
+  deleteBooking(e) {
+    this.deleteConfirmed(e)
+  },
+
+  deleteConfirmed(e) {
+    const page = this;
+    const id = e.currentTarget.dataset.id;
+    const index = e.currentTarget.dataset.index;
+    // wx.request({
+    //   url: `${app.globalData.baseUrl}/booking/${id}`
+    // })
+    wx.request({
+      url: `${app.globalData.baseUrl}/bookings/${id}`,
+      method: 'DELETE',
+      header: app.globalData.header,
+      success(res) {
+        let bookings = page.data.bookings
+        bookings.splice(index, 1)
+        page.setData({ bookings: bookings})
+      }
+    })
+  },
   /**
    * Lifecycle function--Called when page is initially rendered
    */
@@ -33,8 +63,6 @@ Page({
       method: 'GET',
       header: app.globalData.header,
       success(res) {
-        console.log('get all bookings')
-        console.log(res.data);
         page.setData({bookings: res.data.bookings})
       }
     })

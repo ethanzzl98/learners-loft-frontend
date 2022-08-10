@@ -6,9 +6,6 @@ Page({
    * Page initial data
    */
   data: {
-    lesson: {
-      id: 16
-    }
   },
 
   bookLesson() {
