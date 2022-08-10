@@ -22,7 +22,8 @@ Page({
         const lessons = res.data;
         page.setData({
           data: lessons,
-        })
+        });
+        console.log(page.data)
       }
     })
   },
