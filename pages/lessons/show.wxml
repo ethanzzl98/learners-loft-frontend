@@ -12,9 +12,9 @@
   </view>
   <view class="time">
     <image class="pic" src="/images/time.png"></image>
-    <text>{{lesson.start_date}} {{lesson.start_time}} - {{lesson.end_time}}</text>
+    <text>{{lesson.start_time}} - {{lesson.end_time}}</text>
   </view>
-  <view class="description">{{lesson.description}}</view>
+  <view class="description">{{lesson.description}}!</view>
   <view class="buttons">
     <button class="btn-book" bindtap="bookLesson">Book</button>
     <button class="btn-delete" bindtap="deleteLesson">Delete</button>
