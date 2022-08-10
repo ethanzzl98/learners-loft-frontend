@@ -8,6 +8,6 @@
       <view class="title">{{item.lesson.title}}</view>
       <view class="time">{{item.lesson.start_time}} - {{item.lesson.end_time}}</view>
     </view>
-    <button bindtap="deleteBooking" data-id="{{item.id}}">Delete</button>
+    <button bindtap="deleteBooking" data-id="{{item.id}}" data-index="{{index}}">Cancel</button>
   </view>
 </view>
