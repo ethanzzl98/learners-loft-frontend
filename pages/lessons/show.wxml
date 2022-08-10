@@ -4,17 +4,17 @@
   <view class="picture" style="background-image: url(/images/show_lesson.jpeg); background-size: cover;"></view>
   <view class="subject">
     <image class="pic" src="/images/subject.png"></image>
-    <text>Subject</text>
+    <text>{{lesson.subject}}</text>
   </view>
   <view class="title">
     <image class="pic" src="/images/title.png"></image>
-    <text>Lesson Title</text>
+    <text>{{lesson.title}}</text>
   </view>
   <view class="time">
     <image class="pic" src="/images/time.png"></image>
-    <text>Time</text>
+    <text>{{lesson.start_date}} {{lesson.start_time}} - {{lesson.end_time}}</text>
   </view>
-  <view class="description">Description</view>
+  <view class="description">{{lesson.description}}</view>
   <view class="buttons">
     <button class="btn-book" bindtap="bookLesson">Book</button>
     <button class="btn-delete" bindtap="deleteLesson">Delete</button>

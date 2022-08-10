@@ -19,11 +19,10 @@ Page({
   getData() {
     let page = this;
     wx.request({
-      url: 'http://localhost:3000/api/v1/lessons',
+      url: `${app.globalData.baseUrl}/lessons`,
       method: 'GET',
       header: app.globalData.header,
       success(res) {
-        // console.log(res);
         const lessons = res.data;
         page.setData({
           data: lessons,
@@ -87,7 +86,7 @@ Page({
   },
 
   goToLesson(e) {
-    const lesson = this.data[e.currentTarget.dataset.id]
+    // debugger
     wx.navigateTo({
       url: `/pages/lessons/show?id=${e.currentTarget.dataset.id}`,
     })
