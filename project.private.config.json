@@ -31,7 +31,14 @@
         },
         {
           "name": "",
-          "pathName": "pages/lessons/index",
+          "pathName": "pages/bookings/index",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
+          "name": "",
+          "pathName": "pages/lessons/components",
           "query": "",
           "launchMode": "default",
           "scene": null
