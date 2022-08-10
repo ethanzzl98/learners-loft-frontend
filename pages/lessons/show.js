@@ -10,12 +10,26 @@ Page({
 
   bookLesson() {
     const page = this;
-    wx.request({
-      url: `${app.globalData.baseUrl}/lessons/${page.data.id}/bookings`,
-      method: 'POST',
-      header: app.globalData.header,
-      success(res) {
-        console.log(res)
+    wx.showModal({
+      title: 'Are you sure?',
+      confirmText: 'Yes',
+      confirmColor: 'green',
+      cancelText: 'No',
+      cancelColor: 'red',
+      success (res) {
+        if (res.confirm) {
+          wx.request({
+            url: `${app.globalData.baseUrl}/lessons/${page.data.id}/bookings`,
+            method: 'POST',
+            header: app.globalData.header,
+            success(res) {
+              console.log(res)
+              wx.switchTab({
+                url: '/pages/bookings/index',
+              })
+            }
+          })
+        }
       }
     })
   },
@@ -26,16 +40,28 @@ Page({
 
   deleteConfirmed() {
     const page = this;
-    wx.request({
-      url: `${app.globalData.baseUrl}/lessons/${page.data.id}`,
-      method: "DELETE",
-      header: app.globalData.header,
+    wx.showModal({
+      title: 'Are you sure?',
+      confirmText: 'Yes',
+      confirmColor: 'green',
+      cancelText: 'No',
+      cancelColor: 'red',
       success(res) {
-        console.log(res);
-        wx.navigateBack();
+        if (res.confirm) {
+          wx.request({
+            url: `${app.globalData.baseUrl}/lessons/${page.data.id}`,
+            method: "DELETE",
+            header: app.globalData.header,
+            success(res) {
+              // console.log(res);
+              wx.navigateBack();
+            }
+          })
+        }
       }
     })
   },
+
   /**
    * Lifecycle function--Called when page load
    */
