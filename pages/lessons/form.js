@@ -50,6 +50,7 @@ Page({
       start_time: page.data.startTime,
       end_time: page.data.endTime,
       description: page.data.description,
+      icon_url: page.data.iconUrl,
       user_id: app.globalData.user.id
     }
   },
