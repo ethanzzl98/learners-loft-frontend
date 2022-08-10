@@ -59,11 +59,12 @@ Page({
   },
 
   createLesson: function () {
+    const page = this;
     wx.request({
       url: `${app.globalData.baseUrl}/lessons`,
       method: 'POST',
-      // header: app.globalData.header,
-      data: JSON.stringify(this.data.lesson),
+      header: app.globalData.header,
+      data: page.data.lesson,
       success: (res) => {
         console.log(res);
         wx.switchTab({
