@@ -19,21 +19,27 @@ Page({
       method: 'GET',
       header: app.globalData.header,
       success(res) {
-        console.log('get all bookings')
-        console.log(res.data);
         page.setData({bookings: res.data.bookings})
       }
     })
   },
 
-  deleteBooking() {
-    this.deleteConfirmed()
+  deleteBooking(e) {
+    const id = e.currentTarget.dataset.id;
+    this.deleteConfirmed(id)
   },
 
-  deleteConfirmed() {
-    const page = this;
+  deleteConfirmed(id) {
+    // wx.request({
+    //   url: `${app.globalData.baseUrl}/booking/${id}`
+    // })
     wx.request({
-      url: `${app.globalData.baseUrl}`
+      url: `${app.globalData.baseUrl}/bookings/${id}`,
+      method: 'DELETE',
+      header: app.globalData.header,
+      success(res) {
+        console.log(res)
+      }
     })
   },
   /**
