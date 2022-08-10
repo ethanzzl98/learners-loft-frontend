@@ -51,8 +51,8 @@
     </view>
 
     <view class="section">
-      <input wx:if="{{!lesson.icon}}" class="weui-input" bindtap="chooseIcon" auto-focus placeholder="Choose icon"/>
-      <image wx:else bindtap="chooseIcon" src="{{lesson.icon}}"/>
+      <input wx:if="{{!lesson.icon_url}}" class="weui-input" bindtap="chooseIcon" auto-focus placeholder="Choose icon"/>
+      <image wx:else bindtap="chooseIcon" src="{{lesson.icon_url}}"/>
     </view>
 
     <button class="btn-primary" bindtap="createLesson">Save</button>
