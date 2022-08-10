@@ -21,7 +21,7 @@ Page({
   },
 
   changeIcon: function (e) {
-    this.setData({'lesson.icon': e.detail.icon, showIconPicker: false})
+    this.setData({'lesson.icon_url': e.detail.icon, showIconPicker: false})
   },
 
   bindStartTimeChange(e) {
@@ -60,6 +60,7 @@ Page({
 
   createLesson: function () {
     const page = this;
+    console.log(page.data.lesson)
     wx.request({
       url: `${app.globalData.baseUrl}/lessons`,
       method: 'POST',
