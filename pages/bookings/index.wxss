@@ -17,6 +17,11 @@
   margin-top: 15rpx;
 }
 
+.cancel-icon {
+  height: 64rpx;
+  width: 64rpx;
+}
+
 .card-booking-info {
   padding: 24rpx;
 }
