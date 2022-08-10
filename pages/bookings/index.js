@@ -15,11 +15,13 @@ Page({
   onLoad(options) {
     let page = this;
     wx.request({
-      url: `${app.globalData.baseUrl}/bookings?user_id=${app.globalData.user.id}`,
+      url: `${app.globalData.baseUrl}/bookings`,
       method: 'GET',
       header: app.globalData.header,
       success(res) {
-        console.log(res);
+        console.log('get all bookings')
+        console.log(res.data);
+        page.setData({bookings: res.data.bookings})
       }
     })
   },

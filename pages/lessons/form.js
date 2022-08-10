@@ -33,7 +33,29 @@ Page({
   },
 
   chooseIcon() {
-    this.setData({ showIconPicker: true })
+    this.setData({
+      showIconPicker: true
+    })
+  },
+
+  testPost() {
+    const data = this.getFormData();
+    console.log(data);
+  },
+
+  getFormData() {
+    const page = this;
+    console.log(page)
+    return {
+      subject: page.data.subject,
+      title: page.data.title,
+      start_date: page.data.startDate,
+      start_time: page.data.startTime,
+      end_time: page.data.endTime,
+      description: page.data.description,
+      icon_url: page.data.iconUrl,
+      user_id: app.globalData.user.id
+    }
   },
 
   createLesson: function () {

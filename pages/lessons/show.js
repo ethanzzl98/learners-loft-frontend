@@ -14,7 +14,7 @@ Page({
   bookLesson() {
     const page = this;
     wx.request({
-      url: `${app.globalData.baseUrl}/lessons/${page.data.lesson.id}/bookings`,
+      url: `${app.globalData.baseUrl}/lessons/${page.data.id}/bookings`,
       method: 'POST',
       header: app.globalData.header,
       success(res) {
@@ -22,6 +22,35 @@ Page({
       }
     })
   },
+
+  deleteLesson() {
+    this.deleteConfirmed()
+  },
+
+  deleteConfirmed() {
+    const page = this;
+    wx.showModal({
+      title: 'Are you sure?',
+      confirmText: 'Yes',
+      confirmColor: 'green',
+      cancelText: 'No',
+      cancelColor: 'red',
+      success(res) {
+        if (res.confirm) {
+          wx.request({
+            url: `${app.globalData.baseUrl}/lessons/${page.data.id}`,
+            method: "DELETE",
+            header: app.globalData.header,
+            success(res) {
+              // console.log(res);
+              wx.navigateBack();
+            }
+          })
+        }
+      }
+    })
+  },
+
   /**
    * Lifecycle function--Called when page load
    */
@@ -34,9 +63,10 @@ Page({
       success(res) {
         // console.log({res})
         const lesson = res.data;
-        page.setData(
-          {lesson}
-        )
+        page.setData({
+            lesson: lesson,
+            id: options.id
+        })
       }
     })
   },
