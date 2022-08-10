@@ -6,9 +6,22 @@ Page({
    * Page initial data
    */
   data: {
-
+    lesson: {
+      id: 16
+    }
   },
 
+  bookLesson() {
+    const page = this;
+    wx.request({
+      url: `${app.globalData.baseUrl}/lessons/${page.data.lesson.id}/bookings`,
+      method: 'POST',
+      header: app.globalData.header,
+      success(res) {
+        console.log(res)
+      }
+    })
+  },
   /**
    * Lifecycle function--Called when page load
    */

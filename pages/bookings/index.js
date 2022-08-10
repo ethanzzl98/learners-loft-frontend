@@ -1,4 +1,5 @@
 // pages/bookings/index.js
+const app = getApp();
 Page({
 
   /**
@@ -12,7 +13,15 @@ Page({
    * Lifecycle function--Called when page load
    */
   onLoad(options) {
-
+    let page = this;
+    wx.request({
+      url: `${app.globalData.baseUrl}/bookings?user_id=${app.globalData.user.id}`,
+      method: 'GET',
+      header: app.globalData.header,
+      success(res) {
+        console.log(res);
+      }
+    })
   },
 
   /**
