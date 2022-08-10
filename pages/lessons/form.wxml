@@ -92,7 +92,7 @@
     </view>
 
     <!-- <navigator class="" url="/pages/lessons/show" open-type="switchTab"> -->
-        <button class="btn-primary">Save</button>
+        <button class="btn-primary" bindtap="createLesson">Save</button>
     <!-- </navigator> -->
     <button bindtap="testPost">Test</button>
 

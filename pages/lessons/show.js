@@ -7,7 +7,7 @@ Page({
    */
   data: {
     lesson: {
-      id: 1 
+      id: 16
     }
   },
 
@@ -17,9 +17,6 @@ Page({
       url: `${app.globalData.baseUrl}/lessons/${page.data.lesson.id}/bookings`,
       method: 'POST',
       header: app.globalData.header,
-      body: {
-        user_id: app.globalData.user.id
-      },
       success(res) {
         console.log(res)
       }

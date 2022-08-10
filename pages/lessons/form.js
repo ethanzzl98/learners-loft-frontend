@@ -47,7 +47,8 @@ Page({
       subject: page.data.subject,
       title: page.data.title,
       start_date: page.data.startDate,
-      end_date: page.data.endDate,
+      start_time: page.data.startTime,
+      end_time: page.data.endTime,
       description: page.data.description,
       user_id: app.globalData.user.id
     }
