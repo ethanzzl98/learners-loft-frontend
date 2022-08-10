@@ -1,32 +1,35 @@
 // pages/lessons/form.js
 const app = getApp();
 Page({
-
-  /**
-   * Page initial data
-   */
+  
   data: {
-    showIconPicker: false
+    showIconPicker: false,
+    lesson: {
+      user_id: 1
+    }
+  },
+
+  updateData: function (e) {
+    let key = e.currentTarget.dataset.name; 
+    let value = e.detail.value
+    key = `lesson.${key}`
+    this.setData({ [key]: value })
   },
 
   bindStartDateChange(e) {
-    console.log(e)
-    this.setData({startDate: e.detail.value })
+    this.setData({'lesson.start_date': e.detail.value })
   },
 
-  // bindEndDateChange(e) {
-  //   console.log(e)
-  //   this.setData({endDate: e.detail.value })
-  // },
+  changeIcon: function (e) {
+    this.setData({'lesson.icon': e.detail.icon, showIconPicker: false})
+  },
 
   bindStartTimeChange(e) {
-    console.log(e)
-    this.setData({startTime: e.detail.value })
+    this.setData({'lesson.start_time': e.detail.value,  })
   },
 
   bindEndTimeChange(e) {
-    console.log(e)
-    this.setData({endTime: e.detail.value })
+    this.setData({'lesson.end_time': e.detail.value })
   },
 
   chooseIcon() {
@@ -55,75 +58,18 @@ Page({
     }
   },
 
-  createLesson() {
-    const page = this;
+  createLesson: function () {
     wx.request({
       url: `${app.globalData.baseUrl}/lessons`,
       method: 'POST',
-      header: app.globalData.header,
-      data: this.getFormData(),
-      success(res) {
+      // header: app.globalData.header,
+      data: JSON.stringify(this.data.lesson),
+      success: (res) => {
         console.log(res);
         wx.switchTab({
           url: '/pages/lessons/index',
         })
       }
     })
-  },
-
-  /**
-   * Lifecycle function--Called when page load
-   */
-  onLoad(options) {
-
-  },
-
-  /**
-   * Lifecycle function--Called when page is initially rendered
-   */
-  onReady() {
-
-  },
-
-  /**
-   * Lifecycle function--Called when page show
-   */
-  onShow() {
-
-  },
-
-  /**
-   * Lifecycle function--Called when page hide
-   */
-  onHide() {
-
-  },
-
-  /**
-   * Lifecycle function--Called when page unload
-   */
-  onUnload() {
-
-  },
-
-  /**
-   * Page event handler function--Called when user drop down
-   */
-  onPullDownRefresh() {
-
-  },
-
-  /**
-   * Called when page reach bottom
-   */
-  onReachBottom() {
-
-  },
-
-  /**
-   * Called when user click on the top right corner to share
-   */
-  onShareAppMessage() {
-
   }
 })

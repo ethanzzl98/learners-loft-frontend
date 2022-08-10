@@ -30,8 +30,12 @@ Component({
    * Component methods
    */
   methods: {
-    choose(e) {
-
+    chooseIcon: function (e) {
+      console.log(e);
+      let index = e.currentTarget.dataset.index;
+      let icon = this.data.icons[index]
+      this.triggerEvent('changeIcon', {index, icon})
+      this.setData({index, icon})
     }
   }
 })

@@ -21,10 +21,13 @@
   background-color: #FFF;
   overflow: scroll;
   border-radius: 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
-.icon {
-  margin: 0 auto;
+.icon-container {
+  /* margin: 0 auto; */
   padding: 20rpx;
   /* margin-left: 1rpx;
   margin-right: 1rpx: */
@@ -36,15 +39,31 @@
   /* grid-template-columns: 100px 100px; */
   /* grid-template-rows: 80px 80px;  */
   gap: 10px 10px;
+  overflow: scroll;
+  flex-grow: 1;
 
   /* grid-template-columns: auto auto; */
 
 }
 
-.icon image {
+.icon-container image {
   /* height: 110px; */
   /* padding: 10rpx; */
   width: 100%;
   justify-self: center;
 }
 
+.btn-primary {
+  border-radius: 50rpx;
+  /* bottom: 5px; */
+  color: white;
+  padding: 24rpx 32rpx;
+  margin-top: 64rpx;
+  margin-bottom: 64rpx;
+  text-shadow: 2rpx 2rpx black;
+  box-shadow: 0 0 2rpx rgb(1,1,1);
+  background-color: #7E0DF2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
