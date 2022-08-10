@@ -36,7 +36,7 @@
   margin-right: 20rpx;
   padding: 20rpx 20rpx;
   font-size: 40rpx;
-  color: rgb(2, 2, 2);
+  color: rgb(250, 246, 246);
   display: flex;
 }
 
