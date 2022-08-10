@@ -12,7 +12,7 @@
   </view>
   <view class="time">
     <image class="pic" src="/images/time.png"></image>
-    <text>Lesson Title</text>
+    <text>Time</text>
   </view>
   <view class="description">Description</view>
   <view class="buttons">

@@ -16,9 +16,9 @@
   box-shadow: 0 0 4rpx rgb(1,1,1);
   text-align:left;
   padding: 10rpx;
-  color: #F27E0D;
-  font-size: large;
-  font-weight: 600;
+  color: #333333;
+  font-size: larger;
+  font-weight: 500;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   display: flex;
   justify-content: start;
@@ -33,9 +33,9 @@
   box-shadow: 0 0 4rpx rgb(1,1,1);
   text-align:left;
   padding: 10rpx;
-  color: #F27E0D;
+  color: #333333;
   font-size: large;
-  font-weight: 600;
+  font-weight: 400;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   display: flex;
   justify-content: start;
