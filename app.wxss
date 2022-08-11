@@ -1,4 +1,8 @@
 /**app.wxss**/
+:root {
+    --orange: #F27E0D;
+}
+
 .container {
   height: 100%;
   display: flex;

@@ -1,18 +1,18 @@
 <!--pages/lessons/index.wxml-->
 <view style="background-color: rgb(245,245,245); background-size: cover; height: 100vh; overflow-y: scroll;">
-  <view class="header">Lessons</view>
-  <view class="flip-card" wx:for="{{data}}">
-    <view class="flip-card-inner">
-      <view class="card-lesson-front">
-        <image src="{{ item.icon_url || '/images/index_lesson.png'}}" class="pic">Subject icon</image>
-        <view class="subject">{{item.subject}}</view>
-      </view>
-      <view class="card-lesson-back">
-        <image src="{{ item.icon_url || '/images/index_lesson.png'}}" class="pic">Subject icon</image>
-        <view class="title">{{item.title}}</view>
-        <view class="time">{{item.start_time}} - {{item.end_time}}</view>
-        <button type="default" bindtap="goToLesson" data-id="{{item.id}}">More</button>
-      </view>
+    <view class="header">Lessons</view>
+    <view class="flip-card" wx:for="{{data}}">
+        <view class="flip-card-inner">
+            <view class="card-lesson-front">
+                <image src="{{ item.icon_url || '/images/index_lesson.png'}}" class="pic">Subject icon</image>
+                <view class="subject">{{item.subject}}</view>
+            </view>
+            <view class="card-lesson-back">
+                <image src="{{ item.icon_url || '/images/index_lesson.png'}}" class="pic">Subject icon</image>
+                <view class="title">{{item.title}}</view>
+                <view class="time">{{item.start_time}} - {{item.end_time}}</view>
+                <button type="default" bindtap="goToLesson" data-id="{{item.id}}">More</button>
+            </view>
+        </view>
     </view>
-  </view>
 </view>
