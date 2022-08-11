@@ -35,10 +35,6 @@ Page({
   },
 
   deleteLesson() {
-    this.deleteConfirmed()
-  },
-
-  deleteConfirmed() {
     const page = this;
     wx.showModal({
       title: 'Are you sure?',
@@ -46,22 +42,35 @@ Page({
       confirmColor: 'green',
       cancelText: 'No',
       cancelColor: 'red',
-      success(res) {
+      success(res) {    
         if (res.confirm) {
-          wx.request({
-            url: `${app.globalData.baseUrl}/lessons/${page.data.id}`,
-            method: "DELETE",
-            header: app.globalData.header,
-            success(res) {
-              // console.log(res);
-              wx.navigateBack();
-            }
-          })
+          page.deleteConfirmed()
         }
       }
     })
   },
 
+  deleteConfirmed() {
+    const page = this;
+    wx.request({
+      url: `${app.globalData.baseUrl}/lessons/${page.data.id}`,
+      method: "DELETE",
+      header: app.globalData.header,
+      success(res) {
+        // console.log(res);
+        wx.navigateBack();
+      }
+    })
+  },
+
+  editLesson() {
+    const page = this;
+    app.globalData.lesson = page.data.lesson;
+    app.globalData.lessonId = page.data.id;
+    wx.switchTab({
+      url: '/pages/lessons/form',
+    })
+  },
   /**
    * Lifecycle function--Called when page load
    */

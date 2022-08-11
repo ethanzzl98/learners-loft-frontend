@@ -6,7 +6,6 @@
     <view class="card-lesson-info">
       <view class="subject">{{item.subject}}</view>
       <view class="title">{{item.title}}</view>
-      <view class="title">{{}}</view>
     </view>
   </view>
 </view>
