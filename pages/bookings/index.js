@@ -72,6 +72,7 @@ Page({
       method: 'GET',
       header: app.globalData.header,
       success(res) {
+        console.log(res.data.bookings)
         page.setData({bookings: res.data.bookings})
       }
     })

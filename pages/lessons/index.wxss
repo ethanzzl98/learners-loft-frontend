@@ -2,8 +2,8 @@
 .flip-card {
   background: transparent;
   height: 250rpx;
-  margin: 16rpx 20rpx;
-  perspective: 2000rpx;
+  margin: 40rpx 20rpx;
+  perspective: 3000rpx;
 }
 
 .flip-card-inner {
