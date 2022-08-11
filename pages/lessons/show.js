@@ -24,7 +24,7 @@ Page({
             method: 'POST',
             header: app.globalData.header,
             success(res) {
-              console.log(res)
+              // console.log(res)
               wx.switchTab({
                 url: '/pages/bookings/index',
               })

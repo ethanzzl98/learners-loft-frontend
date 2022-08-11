@@ -19,6 +19,7 @@
     <button class="btn-book" bindtap="bookLesson">Book</button>
   </view>
   <view class="buttons" wx:else>
+    <button class="btn-book" bindtap="bookLesson">Book</button>
     <button class="btn-delete" bindtap="deleteLesson">Delete</button>
     <button class="btn-edit" bindtap="editLesson">Edit</button>
   </view>

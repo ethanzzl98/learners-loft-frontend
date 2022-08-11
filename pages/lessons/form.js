@@ -52,7 +52,7 @@ Page({
       header: app.globalData.header,
       data: page.data.lesson,
       success: (res) => {
-        console.log(res);
+        // console.log(res);
         wx.switchTab({
           url: '/pages/lessons/index',
         })
@@ -68,7 +68,7 @@ Page({
       header: app.globalData.header,
       data: page.data.lesson,
       success: (res) => {
-        console.log(res);
+        // console.log(res);
         wx.switchTab({
           url: '/pages/lessons/index',
         })
@@ -80,6 +80,7 @@ Page({
     const page = this;
     const data = {
       isEdit: false,
+      lesson: {},
       id: null,
     };
     if (app.globalData.lessonId !== null && app.globalData.lessonId !== undefined) {
