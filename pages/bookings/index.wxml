@@ -1,13 +1,31 @@
 <!--pages/bookings/index.wxml-->
 <view style="background-color: rgb(230,230,230); background-size: cover; height: 100vh; overflow-y: scroll;">
-  <view class="header">Bookings</view>
-  <view class="card-booking" wx:for="{{bookings}}">
-    <image src="{{ item.lesson.icon_url || '/images/booked.png'}}" class="pic">Subject icon</image>
-    <view class="card-booking-info">
-      <view class="subject">{{item.lesson.subject}}</view>
-      <view class="title">{{item.lesson.title}}</view>
-      <view class="time">{{item.lesson.start_time}} - {{item.lesson.end_time}}</view>
+    <view class="headers">
+        <button bindtap="switchList" data-name="bookings">Learning</button>
+        <button bindtap="switchList" data-name="teach">Teaching</button>
     </view>
-    <image bindtap="deleteBooking" data-id="{{item.id}}" data-index="{{index}}" class="cancel-icon" src="/images/cancel.png"></image>
-  </view>
+    <view class="lessons-container" wx:if="{{showListName === 'bookings'}}">
+        <view class="header">What I'm Learning</view>
+        <view class="card-booking" wx:for="{{bookings}}">
+            <image src="{{ item.lesson.icon_url || '/images/booked.png'}}" class="pic">Subject icon</image>
+            <view class="card-booking-info">
+                <view class="subject">{{item.lesson.subject}}</view>
+                <view class="title">{{item.lesson.title}}</view>
+                <view class="time">{{item.lesson.start_time}} - {{item.lesson.end_time}}</view>
+            </view>
+            <image bindtap="deleteBooking" data-id="{{item.id}}" data-index="{{index}}" class="cancel-icon" src="/images/cancel.png"></image>
+        </view>
+    </view>
+    <view class="lessons-container" wx:else>
+        <view class="header">What I'm Teaching</view>
+        <view class="card-booking" wx:for="{{teachings}}">
+            <image src="{{ item.icon_url || '/images/booked.png'}}" class="pic">Subject icon</image>
+            <view class="card-booking-info">
+                <view class="subject">{{item.subject}}</view>
+                <view class="title">{{item.title}}</view>
+                <view class="time">{{item.start_time}} - {{item.end_time}}</view>
+            </view>
+            <image bindtap="deleteConfirm" data-id="{{item.id}}" data-index="{{index}}" class="cancel-icon" src="/images/cancel.png"></image>
+        </view>
+    </view>
 </view>
