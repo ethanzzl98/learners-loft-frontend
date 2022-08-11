@@ -68,7 +68,6 @@ Page({
       header: app.globalData.header,
       data: page.data.lesson,
       success: (res) => {
-        // console.log(res);
         wx.switchTab({
           url: '/pages/lessons/index',
         })
@@ -76,7 +75,7 @@ Page({
     })
   },
 
-  onShow() {
+  onShow: function () {
     const page = this;
     const data = {
       isEdit: false,
