@@ -15,8 +15,10 @@
     <text>{{lesson.start_time}} - {{lesson.end_time}}</text>
   </view>
   <view class="description">{{lesson.description}}!</view>
-  <view class="buttons">
+  <view class="buttons" wx:if="{{isStudent}}">
     <button class="btn-book" bindtap="bookLesson">Book</button>
+  </view>
+  <view class="buttons" wx:else>
     <button class="btn-delete" bindtap="deleteLesson">Delete</button>
     <button class="btn-edit" bindtap="editLesson">Edit</button>
   </view>

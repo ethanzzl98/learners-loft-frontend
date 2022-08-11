@@ -4,9 +4,6 @@ Page({
   
   data: {
     showIconPicker: false,
-    lesson: {
-      user_id: 1
-    }
   },
 
   updateData: function (e) {
@@ -38,29 +35,33 @@ Page({
     })
   },
 
-  testPost() {
-    const data = this.getFormData();
-    console.log(data);
-  },
-
-  getFormData() {
+  createLesson: function () {
     const page = this;
-    console.log(page)
-    return {
-      subject: page.data.subject,
-      title: page.data.title,
-      start_date: page.data.startDate,
-      start_time: page.data.startTime,
-      end_time: page.data.endTime,
-      description: page.data.description,
-      icon_url: page.data.iconUrl,
-      user_id: app.globalData.user.id
+    if (page.data.isEdit) {
+      this.makeUpdateLessonRequest()
+    } else {
+      this.makeCreateLessonRequest()
     }
   },
 
-  createLesson: function () {
+  makeUpdateLessonRequest() {
     const page = this;
-    console.log(page.data.lesson)
+    wx.request({
+      url: `${app.globalData.baseUrl}/lessons/${page.data.id}`,
+      method: 'PATCH',
+      header: app.globalData.header,
+      data: page.data.lesson,
+      success: (res) => {
+        console.log(res);
+        wx.switchTab({
+          url: '/pages/lessons/index',
+        })
+      }
+    })
+  },
+
+  makeCreateLessonRequest() {
+    const page = this;
     wx.request({
       url: `${app.globalData.baseUrl}/lessons`,
       method: 'POST',
@@ -72,6 +73,25 @@ Page({
           url: '/pages/lessons/index',
         })
       }
+    })
+  },
+
+  onShow() {
+    const page = this;
+    const data = {
+      isEdit: false,
+      id: null,
+    };
+    if (app.globalData.lessonId !== null && app.globalData.lessonId !== undefined) {
+      data.isEdit = true;
+      data.lesson = app.globalData.lesson;
+      data.id = app.globalData.lessonId;
+      app.globalData.lesson = undefined;
+      app.globalData.lessonId = undefined;
+    } 
+    page.setData(data);
+    page.setData({
+      'lesson.user_id': app.globalData.user.id
     })
   }
 })
