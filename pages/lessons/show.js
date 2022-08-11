@@ -6,6 +6,7 @@ Page({
    * Page initial data
    */
   data: {
+    isStudent: false
   },
 
   bookLesson() {
