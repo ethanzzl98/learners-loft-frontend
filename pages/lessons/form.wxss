@@ -8,6 +8,13 @@
   opacity: 0.5;
 }
 
+.page-container {
+  background-color: #f4f4f4;
+  background-size: cover; 
+  height: 100vh; 
+  overflow-y: scroll;
+}
+
 
 /* .header {
   display: flex;
@@ -29,26 +36,19 @@
 } */
 
 .section {
-  border: solid 1px rgb(8, 8, 8);
-  margin-top: 20rpx;
-  margin-bottom: 50rpx;
-  margin-left: 20rpx;
-  margin-right: 20rpx;
-  padding: 20rpx 20rpx;
+  box-shadow: 4px 4px 8px rgba(0,0,0,0.1);
+  margin: 56rpx 32rpx;
+  padding: 40rpx 32rpx;
+  box-sizing: border-box;
   font-size: 40rpx;
   color: rgb(2, 2, 2);
   display: flex;
+  justify-content: space-between;
+  background: white;
+  border-radius: 4px;
 }
 
 .section-description {
-  border: solid 1px rgb(8, 8, 8);
-  margin-top: 50rpx;
-  margin-bottom: 50rpx;
-  margin-left: 20rpx;
-  margin-right: 20rpx;
-  padding: 20rpx 20rpx;
-  font-size: 40rpx;
-  color: rgb(2, 2, 2);
   height: 200rpx;
 }
 
@@ -83,6 +83,24 @@
   height: 100rpx;
   width: 100rpx;
   margin-top: 10rpx;
+}
+
+.section-icon {
+  background-image: url('https://cdn-icons-png.flaticon.com/512/44/44289.png');  
+  /* top: 0; bottom: 0; */
+  background-size: contain;
+  background-repeat: no-repeat;
+  /* height: 1cm; */
+  background-position: center;
+  padding: 20rpx 20rpx;
+  /* border: solid 1px rgb(8, 8, 8); */
+  /* margin-top: 20rpx; */
+  /* margin-bottom: 50rpx; */
+  /* margin-left: 20rpx; */
+  /* margin-right: 20rpx; */ 
+  /* font-size: 40rpx; */
+  /* color: rgb(2, 2, 2); */
+  /* display: flex; */
 }
 
 

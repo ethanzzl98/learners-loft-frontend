@@ -1,7 +1,9 @@
-<view style="background-color: rgba(243,126,34,.4); background-image: linear-gradient(135deg, rgba(243,126,34,.4) 65%, rgba(125,18,238,.5) 100%); background-size: cover; height: 100vh; overflow-y: scroll;">
+<view class="page-container">
   <view class="main">
     <form bindsubmit="save">
       <view class="header">Add Lessons</view>
+
+      <!-- background-image: linear-gradient(135deg, rgba(243,126,34,.4) 65%, rgba(125,18,238,.5) 100%); -->
 
 
     <view class="section">
@@ -21,31 +23,31 @@
     </view>
 
     <view class="section">
-      <picker mode="date" value="{{date}}" start="2022-08-01" end="2027-09-01" bindchange="bindStartDateChange">
+      <picker mode="date" value="{{date}}" start="2022-08-01" end="2023-09-01" bindchange="bindStartDateChange">
         <view class="picker">
         Start Date: <text class="section-picker">{{lesson.start_date}}</text>
         </view>
       </picker>
     </view>
 
-  <view class="section">
-      <picker mode="time" value="{{time}}" start="01:00" end="23:59" bindchange="bindStartTimeChange">
-        <view class="picker">
-        Start Time: <text class="section-picker">{{lesson.start_time}}</text>
-      </view>
+    <view class="section">
+      <picker mode="time" value="{{time}}" start="07:00" end="00:00" bindchange="bindStartTimeChange">
+        <view class="picker"> Start Time: 
+          <text class="section-picker">{{lesson.start_time}}</text>
+        </view>
       </picker>
 
-    <picker mode="time" value="{{time}}" start="01:00" end="23:59" bindchange="bindEndTimeChange">
-      <view class="picker">
-        End Time: <text class="section-picker">{{lesson.end_time}}</text>
-      </view>
-    </picker>
-  </view>
+      <picker mode="time" value="{{time}}" start="07:00" end="00:00" bindchange="bindEndTimeChange">
+        <view class="picker">
+          End Time: <text class="section-picker">{{lesson.end_time}}</text>
+        </view>
+      </picker>
+    </view>
 
-    <view class="section-description">
+    <view class="section section-description">
       <view class="weui-cells weui-cells_after-title">
         <view class="weui-cell weui-cell_input">
-          <input data-name="description" value="{{lesson.description}}" bindinput="updateData" class="weui-input" auto-focus placeholder="Lesson Description"/>
+          <textarea data-name="description" value="{{lesson.description}}" bindinput="updateData" class="weui-input" auto-focus placeholder="Lesson Description"/>
         </view>
       </view>
     </view>
@@ -53,6 +55,7 @@
     <view class="section">
       <input wx:if="{{!lesson.icon_url}}" class="weui-input" bindtap="chooseIcon" auto-focus placeholder="Choose icon"/>
       <image wx:else bindtap="chooseIcon" src="{{lesson.icon_url}}"/>
+      <view wx:if="{{!lesson.icon_url}}" class="section-icon"></view>
     </view>
 
     <button class="btn-primary" bindtap="createLesson">Save</button>

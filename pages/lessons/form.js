@@ -67,7 +67,7 @@ Page({
       header: app.globalData.header,
       data: page.data.lesson,
       success: (res) => {
-        console.log(res);
+        this.setData({lesson: {user_id: 1}})
         wx.switchTab({
           url: '/pages/lessons/index',
         })
