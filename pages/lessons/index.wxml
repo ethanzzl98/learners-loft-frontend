@@ -1,12 +1,40 @@
 <!--pages/lessons/index.wxml-->
-<view style="background-color: rgba(243,126,34,.4); background-image: linear-gradient(135deg, rgba(243,126,34,.4) 65%, rgba(125,18,238,.5) 100%); background-size: cover; height: 100vh; overflow-y: scroll;">
+<view style="background-color: rgb(245,245,245); background-size: cover; height: 100vh; overflow-y: scroll;">
   <view class="header">Lessons</view>
-  <view class="card-lesson" bindtap="goToLesson" wx:for="{{data}}" data-id="{{item.id}}">
-    <image src="{{ item.icon_url || '/images/index_lesson.png'}}" class="pic">Subject icon</image>
-    <view class="card-lesson-info">
-      <view class="subject">{{item.subject}}</view>
-      <view class="title">{{item.title}}</view>
-      <view class="title">{{}}</view>
+  <view class="flip-card">
+    <view class="flip-card-inner">
+      <view class="card-lesson-front" wx:for="{{data}}" data-id="{{item.id}}">
+        <image src="{{ item.icon_url || '/images/index_lesson.png'}}" class="pic">Subject icon</image>
+        <view class="subject">{{item.subject}}</view>
+      </view>
+      <view class="card-lesson-back" wx:for="{{data}}" data-id="{{item.id}}">
+        <image src="{{ item.icon_url || '/images/index_lesson.png'}}" class="pic">Subject icon</image>
+        <view class="title">{{item.title}}</view>
+        <view class="time">{{item.start_time}} - {{item.end_time}}</view>
+        <button type="default" bindtap="goToLesson">More</button>
+      </view>
     </view>
   </view>
 </view>
+
+<!-- DON'T DELETE THE CODE BELOW!!! -->
+<!-- ================================== bindtap="goToLesson" -->
+
+
+
+<!-- ================================== -->
+<!-- 
+  <view class="flip-card">
+    <view class="flip-card-inner">
+      <view class="flip-card-front">
+        <view class="h2">This is what I am teaching</view>
+        <image class="pic" src="/images/teacher1.png"></image>
+      </view>
+      <view class="flip-card-back">
+        <view class="subject">Subject</view>
+        <view class="title">Title</view>
+        <view class="time">Time</view>
+      </view>
+    </view>
+  </view>
+ -->

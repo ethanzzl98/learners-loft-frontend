@@ -30,7 +30,6 @@
   color: #F27E0D;
   font-size: large;
   font-weight: 600;
-  margin: 0;
   margin-bottom: 8rpx;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
@@ -39,7 +38,6 @@
   color: #F27E0D;
   font-size: large;
   font-weight: 500;
-  margin: 0;
   margin-bottom: 8rpx;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
@@ -48,7 +46,6 @@
   color: #F27E0D;
   font-size: large;
   font-weight: 500;
-  margin: 0;
   margin-bottom: 8rpx;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
