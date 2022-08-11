@@ -14,7 +14,7 @@
     <image class="pic" src="/images/time.png"></image>
     <text>{{lesson.start_date}} | {{lesson.start_time}} - {{lesson.end_time}}</text>
   </view>
-  <view class="description">{{lesson.description}}!</view>
+  <view class="description">{{lesson.description}}</view>
   <view class="buttons" wx:if="{{isStudent}}">
     <button class="btn-book" bindtap="bookLesson">Book</button>
   </view>
