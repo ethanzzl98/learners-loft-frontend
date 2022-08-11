@@ -16,25 +16,3 @@
     </view>
   </view>
 </view>
-
-<!-- DON'T DELETE THE CODE BELOW!!! -->
-<!-- ================================== bindtap="goToLesson" -->
-
-
-
-<!-- ================================== -->
-<!-- 
-  <view class="flip-card">
-    <view class="flip-card-inner">
-      <view class="flip-card-front">
-        <view class="h2">This is what I am teaching</view>
-        <image class="pic" src="/images/teacher1.png"></image>
-      </view>
-      <view class="flip-card-back">
-        <view class="subject">Subject</view>
-        <view class="title">Title</view>
-        <view class="time">Time</view>
-      </view>
-    </view>
-  </view>
- -->
