@@ -4,9 +4,6 @@ Page({
   
   data: {
     showIconPicker: false,
-    lesson: {
-      user_id: 1
-    }
   },
 
   updateData: function (e) {
@@ -81,16 +78,20 @@ Page({
 
   onShow() {
     const page = this;
-    let isEdit = false;
+    const data = {
+      isEdit: false,
+      id: null,
+    };
     if (app.globalData.lessonId !== null && app.globalData.lessonId !== undefined) {
-      isEdit = true;
-      page.setData({
-        lesson: app.globalData.lesson,
-        id: app.globalData.lessonId
-      })
+      data.isEdit = true;
+      data.lesson = app.globalData.lesson;
+      data.id = app.globalData.lessonId;
       app.globalData.lesson = undefined;
       app.globalData.lessonId = undefined;
-    }
-    page.setData({isEdit: isEdit});
+    } 
+    page.setData(data);
+    page.setData({
+      'lesson.user_id': app.globalData.user.id
+    })
   }
 })
