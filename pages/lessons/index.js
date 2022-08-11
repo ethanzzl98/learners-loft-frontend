@@ -23,7 +23,7 @@ Page({
         page.setData({
           data: lessons,
         });
-        console.log(res.data)
+        // console.log(res.data)
       }
     })
   },

@@ -1,4 +1,5 @@
 <!--pages/lessons/show.wxml-->
+
 <view style="background-color: rgba(243,126,34,.4); background-image: linear-gradient(135deg, rgba(243,126,34,.4) 65%, rgba(125,18,238,.5) 100%); background-size: cover; height: 100vh; overflow-y: scroll; padding: 0 10rpx;">
   <view class="header">Lesson details</view>
   <view class="picture" style="background-image: url(/images/show_lesson.jpeg); background-size: cover;"></view>
@@ -24,3 +25,12 @@
     <button class="btn-edit" bindtap="editLesson">Edit</button>
   </view>
 </view>
+
+<!-- === DO NOT REMOVE COMMENTED OUT CODE!!! === -->
+
+<!-- <view style="background-image: repeating-linear-gradient(45deg, rgba(243,126,34,.6), rgba(243,126,34,.6) 5px, rgba(125,18,238,.6) 5px, rgba(125,18,238,.6) 10px, rgba(200,200,200,.6) 10px, rgb(200,200,200,.6) 15px); background-size: cover; height: 100vh; overflow-y: scroll; padding: 30rpx 30rpx;">
+  <view class="card-white">
+    <image class="pic" src="https://www.dogus.edu.tr/images/default-source/aday/myo/dou_aday_web_gorseller_bankaciilik-sigortacilik.jpg"></image>
+  </view>
+</view> -->
+

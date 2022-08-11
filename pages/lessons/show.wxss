@@ -1,4 +1,5 @@
 /* pages/lessons/show.wxss */
+
 .picture {
   margin: 16rpx 0;
   background-color: white;
@@ -74,3 +75,22 @@
   border-radius: 50rpx;
   box-shadow: 0 0 10rpx #7E0DF2;
 }
+
+/* === DO NOT REMOVE COMMENTED OUT CODE!!! === */
+
+/* .card-white {
+  background-image: url('http://webing.unipv.eu/wp-content/uploads/2017/07/Orientation-Meetings-2017-e1501483507438.jpg');
+  background-size: cover;
+  background-color: white;
+  height: 1284rpx;
+  width: 100%;
+  border-radius: 10rpx;
+}
+
+.pic {
+  height: 1284rpx;
+  width: 100%;
+  object-fit: cover;
+  opacity: 0.3;
+} */
+
