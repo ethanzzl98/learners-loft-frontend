@@ -1,25 +1,17 @@
 <view class="page-container">
   <view class="main">
     <form bindsubmit="save">
-      <view class="header">Add Lessons</view>
+      <view class="header">{{isEdit ? "Edit Lesson" : "Add Lesson"}}</view>
 
       <!-- background-image: linear-gradient(135deg, rgba(243,126,34,.4) 65%, rgba(125,18,238,.5) 100%); -->
 
 
     <view class="section">
-      <view class="weui-cells weui-cells_after-title">
-        <view class="weui-cell weui-cell_input">
-          <input data-name="subject" bindinput="updateData" value="{{lesson.subject}}" class="weui-input" auto-focus placeholder="Subject"/>
-        </view>
-      </view>
+      <input data-name="subject" bindinput="updateData" value="{{lesson.subject}}" class="weui-input" auto-focus placeholder="Subject"/>
     </view>
 
     <view class="section">
-      <view class="weui-cells weui-cells_after-title">
-        <view class="weui-cell weui-cell_input">
-          <input data-name="title" value="{{lesson.title}}" bindinput="updateData" class="weui-input" auto-focus placeholder="Title"/>
-        </view>
-      </view>
+      <input data-name="title" value="{{lesson.title}}" bindinput="updateData" class="weui-input" auto-focus placeholder="Title"/>
     </view>
 
     <view class="section">
@@ -45,11 +37,7 @@
     </view>
 
     <view class="section section-description">
-      <view class="weui-cells weui-cells_after-title">
-        <view class="weui-cell weui-cell_input">
-          <textarea data-name="description" value="{{lesson.description}}" bindinput="updateData" class="weui-input" auto-focus placeholder="Lesson Description"/>
-        </view>
-      </view>
+      <textarea data-name="description" value="{{lesson.description}}" bindinput="updateData" class="weui-input" auto-focus placeholder="Lesson Description"/>
     </view>
 
     <view class="section">

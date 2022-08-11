@@ -76,7 +76,7 @@ Page({
     })
   },
 
-  onShow() {
+  onShow: function () {
     const page = this;
     const data = {
       isEdit: false,
