@@ -19,13 +19,10 @@ Page({
       method: 'GET',
       header: app.globalData.header,
       success(res) {
-          console.log(res)
         const {lessons} = res.data;
-        console.log(lessons)
         page.setData({
           data: lessons,
         });
-        // console.log(lessons)
       }
     })
   },
