@@ -6,7 +6,7 @@ Page({
    * Page initial data
    */
   data: {
-    isStudent: false
+    isTeacher: false
   },
 
   bookLesson() {
@@ -24,7 +24,6 @@ Page({
             method: 'POST',
             header: app.globalData.header,
             success(res) {
-              // console.log(res)
               wx.switchTab({
                 url: '/pages/bookings/index',
               })
@@ -58,7 +57,6 @@ Page({
       method: "DELETE",
       header: app.globalData.header,
       success(res) {
-        // console.log(res);
         wx.navigateBack();
       }
     })
@@ -72,9 +70,7 @@ Page({
       url: '/pages/lessons/form',
     })
   },
-  /**
-   * Lifecycle function--Called when page load
-   */
+
   onLoad: function (options) {
     let page = this;
     wx.request({
@@ -82,62 +78,15 @@ Page({
       method: "GET",
       header: app.globalData.header,
       success(res) {
-        // console.log({res})
         const lesson = res.data;
         page.setData({
             lesson: lesson,
-            id: options.id
+            id: options.id,
+            isTeacher: lesson.user_id === app.globalData.user.id
         })
+        console.log(page.data.lesson)
+        console.log(app.globalData.user.id)
       }
     })
-  },
-
-  /**
-   * Lifecycle function--Called when page is initially rendered
-   */
-  onReady() {
-
-  },
-
-  /**
-   * Lifecycle function--Called when page show
-   */
-  onShow() {
-
-  },
-
-  /**
-   * Lifecycle function--Called when page hide
-   */
-  onHide() {
-
-  },
-
-  /**
-   * Lifecycle function--Called when page unload
-   */
-  onUnload() {
-
-  },
-
-  /**
-   * Page event handler function--Called when user drop down
-   */
-  onPullDownRefresh() {
-
-  },
-
-  /**
-   * Called when page reach bottom
-   */
-  onReachBottom() {
-
-  },
-
-  /**
-   * Called when user click on the top right corner to share
-   */
-  onShareAppMessage() {
-
   }
 })
