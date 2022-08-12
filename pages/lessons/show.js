@@ -12,7 +12,7 @@ Page({
   bookLesson() {
     const page = this;
     wx.showModal({
-      title: 'Are you sure?',
+      title: 'Continue to book?',
       confirmText: 'Yes',
       confirmColor: 'green',
       cancelText: 'No',
