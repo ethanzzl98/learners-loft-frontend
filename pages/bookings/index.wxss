@@ -99,8 +99,8 @@ page {
 }
 
 .cancel-icon {
-  height: 72rpx;
-  width: 72rpx;
+  height: 64rpx;
+  width: 64rpx;
 }
 
 .card-booking-info {

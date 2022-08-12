@@ -18,7 +18,7 @@
         <view class="card-booking-info">
           <view class="subject">{{item.lesson.subject}}</view>
           <view class="title">{{item.lesson.title}}</view>
-          <view class="time">{{item.lesson.start_time}} - {{item.lesson.end_time}}</view>
+          <view class="time">{{item.lesson.start_date}} | {{item.lesson.start_time}} - {{item.lesson.end_time}}</view>
         </view>
       </view>
         <image catchtap="deleteConfirm" data-id="{{item.id}}" data-index="{{index}}" class="cancel-icon" src="/images/cancel.png"></image>
