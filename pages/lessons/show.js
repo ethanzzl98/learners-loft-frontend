@@ -84,8 +84,8 @@ Page({
             id: options.id,
             isTeacher: lesson.user_id === app.globalData.user.id
         })
-        console.log(page.data.lesson)
-        console.log(app.globalData.user.id)
+        // console.log(page.data.lesson)
+        // console.log(app.globalData.user.id)
       }
     })
   }

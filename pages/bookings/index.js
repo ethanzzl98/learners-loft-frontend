@@ -19,6 +19,9 @@ Page({
       learningButton: target === "learning" ? "btn-active" : "btn-inactive",
       teachingButton: target === "teaching" ? "btn-active" : "btn-inactive",
     })
+
+    // console.log(this.data.showListName);
+
   },
 
   onShow() {
@@ -36,7 +39,7 @@ Page({
         page.setData({
           bookings: res.data.bookings
         })
-        console.log("learning:", page.data.bookings)
+        // console.log("learning:", page.data.bookings)
       }
     })
   },
@@ -51,7 +54,7 @@ Page({
         page.setData({
           teachings: res.data.lessons,
         });
-        console.log("lessons:", page.data.teachings)
+        // console.log("lessons:", page.data.teachings)
       }
     })
   },
@@ -59,7 +62,7 @@ Page({
   deleteConfirm(e) {
     const page = this;
     wx.showModal({
-      title: 'Are you sure?',
+      title: 'Cancel this lesson?',
       confirmText: 'Yes',
       confirmColor: 'green',
       cancelText: 'No',
