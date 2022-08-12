@@ -23,7 +23,6 @@ Page({
         page.setData({
           data: lessons,
         });
-        // console.log(res.data)
       }
     })
   },
@@ -83,7 +82,6 @@ Page({
   },
 
   goToLesson(e) {
-    // debugger
     wx.navigateTo({
       url: `/pages/lessons/show?id=${e.currentTarget.dataset.id}`,
     })

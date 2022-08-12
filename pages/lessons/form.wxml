@@ -26,13 +26,13 @@
     </view>
 
     <view class="section">
-      <picker mode="time" value="{{time}}" start="07:00" end="00:00" bindchange="bindStartTimeChange">
+      <picker mode="time" value="{{time}}" start="00:00" end="23:59" bindchange="bindStartTimeChange">
         <view class="picker"> Start Time: 
           <text class="section-picker">{{lesson.start_time}}</text>
         </view>
       </picker>
 
-      <picker mode="time" value="{{time}}" start="07:00" end="00:00" bindchange="bindEndTimeChange">
+      <picker mode="time" value="{{time}}" start="00:00" end="23:59" bindchange="bindEndTimeChange">
         <view class="picker">
           End Time: <text class="section-picker">{{lesson.end_time}}</text>
         </view>

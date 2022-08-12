@@ -2,22 +2,86 @@
 page {
     --orange: #F27E0D;
     --purple: #7E0DF2;
+    --lesson-box-bgcolor: #FFFFFF;
+    --button-default-color: #F3F3F3;
 }
+
+.bookings-banner {
+  padding: 8px;
+  background-size: cover;
+  background-position: center;
+  height: 480rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 24px;
+  font-weight: bold;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+  border-radius: 5px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  
+}
+
+.name {
+  top: 200rpx;
+  right: -190rpx;
+  position: relative;
+  overflow: hidden;
+  color: purple;
+  border: 0 0 8rpx rgb(1,1,1);
+}
+
+.avatar {
+    /* position: absolute; */
+    right: -180px;
+    top: 90rpx;
+    height: 150rpx;
+    width: 150rpx;
+    display: flex;
+    /* justify-content: space-between; */
+    /* align-items: flex-end; */
+    position: relative;
+    border-radius: 50%;
+    overflow: hidden;
+    /* box-shadow: 0 0 8rpx rgb(1,1,1);sa */
+  }
+
 .headers {
     display: flex;
     margin-top: 20rpx;
 }
 
-.headers button {
-    color: var(--orange);
+.lesson-box {
+  margin: 10rpx;
+  background-color: var(--lesson-box-bgcolor);
+  padding-bottom: 10rpx;
 }
 
-.headers button.active {
-    color: var(--purple);
+.btn-active {
+  color: var(--orange);
+  background-color: var(--lesson-box-bgcolor);
+}
+
+.btn-inactive {
+  color: var(--orange);
+  background-color: var(--button-default-color);
+}
+
+.headers {
+    display: flex;
+    margin-top: 30rpx;
+}
+
+.card-info {
+  display: flex;
+  align-items: center;
 }
 
 .card-booking {
   display: flex;
+  justify-content: space-between;
+  padding-right: 50rpx;
   align-items: center;
   background: white;
   box-shadow: 0 0 8rpx rgb(1,1,1);

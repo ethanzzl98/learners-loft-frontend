@@ -1,7 +1,6 @@
 <!--pages/lessons/index.wxml-->
 <view style="background-color: rgb(245,245,245); background-size: cover; height: 100vh; overflow-y: scroll;">
   <view style="display: flex; justify-content: center; align-items: flex-end;" class="company-header main-image">Learners' Loft</view>
-  <view class="header">Lessons</view>
   <view class="flip-card" wx:for="{{data}}">
     <view class="flip-card-inner">
       <view class="card-lesson-front">
@@ -17,7 +16,7 @@
           <view class="date">{{item.start_date}}</view>
           <view class="time">{{item.start_time}} - {{item.end_time}}</view>
         </view>
-        <view class="btn" bindtap="goToLesson" data-id="{{item.id}}">More</view>
+        <view class="btn" bindtap="goToLesson" data-id="{{item.id}}">Book</view>
       </view>
     </view>
   </view>

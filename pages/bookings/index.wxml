@@ -1,31 +1,39 @@
 <!--pages/bookings/index.wxml-->
 <view style="background-color: rgb(230,230,230); background-size: cover; height: 100vh; overflow-y: scroll;">
+  <view class="bookings-banner" style="background-image: linear-gradient(rgba(255, 255, 255,.4), #000000), url(https://res.cloudinary.com/jerrytongshanghailewagon/image/upload/v1660273622/Learners%27%20Loft/students_o0pyos.jpg)">
+      <!-- <image src= class="avatar"></image> -->
+        <open-data type="userAvatarUrl" class="avatar"></open-data>
+        <open-data type="userNickName" class="name"></open-data>
+  </view>
+  <view class="lesson-box">
     <view class="headers">
-        <button bindtap="switchList" data-name="bookings">Learning</button>
-        <button bindtap="switchList" data-name="teach">Teaching</button>
+      <button bindtap="switchList" data-name="learning" class="{{learningButton}}">Learning</button>
+      <button bindtap="switchList" data-name="teaching" class="{{teachingButton}}">Teaching</button>
     </view>
-    <view class="lessons-container" wx:if="{{showListName === 'bookings'}}">
-        <view class="header">What I'm Learning</view>
-        <view class="card-booking" wx:for="{{bookings}}">
-            <image src="{{ item.lesson.icon_url || '/images/booked.png'}}" class="pic">Subject icon</image>
-            <view class="card-booking-info">
-                <view class="subject">{{item.lesson.subject}}</view>
-                <view class="title">{{item.lesson.title}}</view>
-                <view class="time">{{item.lesson.start_time}} - {{item.lesson.end_time}}</view>
-            </view>
-            <image bindtap="deleteBooking" data-id="{{item.id}}" data-index="{{index}}" class="cancel-icon" src="/images/cancel.png"></image>
+    <view class="lessons-container" wx:if="{{showListName === 'learning'}}">
+      <view class="header">What I'm Learning</view>
+      <view class="card-booking" wx:for="{{bookings}}" data-id="{{item.lesson.id}}" bindtap="goToLesson">
+      <view class="card-info">
+        <image src="{{ item.lesson.icon_url || '/images/booked.png'}}" class="pic">Subject icon</image>
+        <view class="card-booking-info">
+          <view class="subject">{{item.lesson.subject}}</view>
+          <view class="title">{{item.lesson.title}}</view>
+          <view class="time">{{item.lesson.start_date}} | {{item.lesson.start_time}} - {{item.lesson.end_time}}</view>
         </view>
+      </view>
+        <image catchtap="deleteConfirm" data-id="{{item.id}}" data-index="{{index}}" class="cancel-icon" src="/images/cancel.png"></image>
+      </view>
     </view>
     <view class="lessons-container" wx:else>
-        <view class="header">What I'm Teaching</view>
-        <view class="card-booking" wx:for="{{teachings}}">
-            <image src="{{ item.icon_url || '/images/booked.png'}}" class="pic">Subject icon</image>
-            <view class="card-booking-info">
-                <view class="subject">{{item.subject}}</view>
-                <view class="title">{{item.title}}</view>
-                <view class="time">{{item.start_time}} - {{item.end_time}}</view>
-            </view>
-            <image bindtap="deleteConfirm" data-id="{{item.id}}" data-index="{{index}}" class="cancel-icon" src="/images/cancel.png"></image>
+      <view class="header">What I'm Teaching</view>
+      <view class="card-booking" wx:for="{{teachings}}" data-id="{{item.id}}" bindtap="goToLesson" wx:key="id">
+        <image src="{{ item.icon_url || '/images/booked.png'}}" class="pic">Subject icon</image>
+        <view class="card-booking-info">
+          <view class="subject">{{item.subject}}</view>
+          <view class="title">{{item.title}}</view>
+          <view class="time">{{item.start_date}} | {{item.start_time}} - {{item.end_time}}</view>
         </view>
+      </view>
     </view>
+  </view>
 </view>
