@@ -6,14 +6,22 @@ Page({
    * Page initial data
    */
   data: {
-    showListName: "bookings"
+    showListName: "learning",
+    learningButton: "btn-active",
+    teachingButton: "btn-inactive",
   },
 
   switchList(e) {
-    this.setData({
-      showListName: e.currentTarget.dataset.name
+    const page = this;
+    const target = e.currentTarget.dataset.name
+    page.setData({
+      showListName: target,
+      learningButton: target === "learning" ? "btn-active" : "btn-inactive",
+      teachingButton: target === "teaching" ? "btn-active" : "btn-inactive",
     })
+
     // console.log(this.data.showListName);
+
   },
 
   onShow() {
