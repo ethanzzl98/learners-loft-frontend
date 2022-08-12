@@ -17,7 +17,7 @@
           <view class="date">{{item.start_date}}</view>
           <view class="time">{{item.start_time}} - {{item.end_time}}</view>
         </view>
-        <view class="btn" bindtap="goToLesson" data-id="{{item.id}}">More</view>
+        <view class="btn" bindtap="goToLesson" data-id="{{item.id}}">Book</view>
       </view>
     </view>
   </view>
