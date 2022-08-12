@@ -27,9 +27,9 @@
     "selectedIconPath": "images/plus_active.png"
   }, {
     "pagePath": "pages/bookings/index",
-    "text": "Bookings",
-    "iconPath": "images/bookings.png",
-    "selectedIconPath": "images/bookings_active.png"
+    "text": "Profile",
+    "iconPath": "images/profile.png",
+    "selectedIconPath": "images/profile_active.png"
   }]
 },
 

@@ -2,63 +2,100 @@
 // 获取应用实例
 const app = getApp();
 Page({
+
+  /**
+   * Page initial data
+   */
   data: {
-    // motto: 'Hello World',
-    // userInfo: {},
-    // hasUserInfo: false,
-    // canIUse: wx.canIUse('button.open-type.getUserInfo'),
-    // canIUseGetUserProfile: false,
-    // canIUseOpenData: wx.canIUse('open-data.type.userAvatarUrl') && wx.canIUse('open-data.type.userNickName') // 如需尝试获取用户信息可改为false
+    showListName: "learning",
+    learningButton: "btn-active",
+    teachingButton: "btn-inactive",
   },
-  // 事件处理函数
-  bindViewTap() {
-    wx.navigateTo({
-      url: '../logs/logs'
+
+  switchList(e) {
+    const page = this;
+    const target = e.currentTarget.dataset.name
+    page.setData({
+      showListName: target,
+      learningButton: target === "learning" ? "btn-active" : "btn-inactive",
+      teachingButton: target === "teaching" ? "btn-active" : "btn-inactive",
     })
+
+    // console.log(this.data.showListName);
+
   },
 
-  onShow(){
+  onShow() {
+    this.getMyLearning();
+    this.getMyTeaching();
+  },
 
-    wx.getUserProfile({
-      desc: 'desc',
-      success: (res) => {
-        console.log('res from successs', res)
+  getMyLearning() {
+    let page = this;
+    wx.request({
+      url: `${app.globalData.baseUrl}/bookings`,
+      method: 'GET',
+      header: app.globalData.header,
+      success(res) {
+        page.setData({
+          bookings: res.data.bookings
+        })
+        // console.log("learning:", page.data.bookings)
       }
     })
-      // 推荐使用wx.getUserProfile获取用户信息，开发者每次通过该接口获取用户个人信息均需用户确认，开发者妥善保管用户快速填写的头像昵称，避免重复弹窗
-      wx.getUserProfile({
-        desc: '展示用户信息', // 声明获取用户个人信息后的用途，后续会展示在弹窗中，请谨慎填写
-        success: (res) => {
-          console.log('res from get user profile', res)
-          this.setData({
-            userInfo: res.userInfo,
-            hasUserInfo: true
-          })
+  },
+
+  getMyTeaching() {
+    let page = this;
+    wx.request({
+      url: `${app.globalData.baseUrl}/lessons/mylessons`,
+      method: 'GET',
+      header: app.globalData.header,
+      success(res) {
+        page.setData({
+          teachings: res.data.lessons,
+        });
+        // console.log("lessons:", page.data.teachings)
+      }
+    })
+  },
+
+  deleteConfirm(e) {
+    const page = this;
+    wx.showModal({
+      title: 'Cancel this lesson?',
+      confirmText: 'Yes',
+      confirmColor: 'green',
+      cancelText: 'No',
+      cancelColor: 'red',
+      success(res) {
+        if (res.confirm) {
+          page.deleteBooking(e)
         }
-      })  
+      }
+    })
   },
 
-  onLoad() {
-    // if (wx.getUserProfile) {
-    //   this.setData({
-    //     canIUseGetUserProfile: true
-    //   })
-    // }
+  deleteBooking(e) {
+    const page = this;
+    const id = e.currentTarget.dataset.id;
+    const index = e.currentTarget.dataset.index;
+    wx.request({
+      url: `${app.globalData.baseUrl}/bookings/${id}`,
+      method: 'DELETE',
+      header: app.globalData.header,
+      success(res) {
+        let bookings = page.data.bookings
+        bookings.splice(index, 1)
+        page.setData({ bookings: bookings })
+      }
+    })
   },
 
-  getUserInfo(e) {
-    // 不推荐使用getUserInfo获取用户信息，预计自2021年4月13日起，getUserInfo将不再弹出弹窗，并直接返回匿名的用户个人信息
-    console.log(e)
-    this.setData({
-      userInfo: e.detail.userInfo,
-      hasUserInfo: true
+  goToLesson(e) {
+    wx.navigateTo({
+      url: `/pages/lessons/show?id=${e.currentTarget.dataset.id}`,
     })
   }
 })
 
-// wx.cloud.callFunction({
-//   name: 'test',
-//   complete: res => {
-//     console.log('callFunction test result: ', res)
-//   }
-// })
