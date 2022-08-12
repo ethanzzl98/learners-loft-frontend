@@ -1,139 +1,55 @@
-// pages/bookings/index.js
+// index.js
+// 获取应用实例
 const app = getApp();
 Page({
-
-    /**
-     * Page initial data
-     */
-    data: {
-        showListName: "bookings"
-    },
-
-    switchList(e) {
-        this.setData({
-            showListName: e.currentTarget.dataset.name
-        })
-        console.log(this.data.showListName);
-    },
-    /**
-     * Lifecycle function--Called when page load
-     */
-    onLoad(options) {
-        let page = this;
-        wx.request({
-            url: `${app.globalData.baseUrl}/bookings`,
-            method: 'GET',
-            header: app.globalData.header,
-            success(res) {
-                page.setData({ bookings: res.data.bookings })
-            }
-        })
-        this.getData();
-    },
-
-    deleteConfirm(e) {
-        const page = this;
-        wx.showModal({
-            title: 'Are you sure?',
-            confirmText: 'Yes',
-            confirmColor: 'green',
-            cancelText: 'No',
-            cancelColor: 'red',
-            success(res) {
-                if (res.confirm) {
-                    page.deleteBooking(e)
-                }
-            }
-        })
-    },
-
-    deleteBooking(e) {
-        const page = this;
-        const id = e.currentTarget.dataset.id;
-        const index = e.currentTarget.dataset.index;
-        wx.request({
-            url: `${app.globalData.baseUrl}/bookings/${id}`,
-            method: 'DELETE',
-            header: app.globalData.header,
-            success(res) {
-                let bookings = page.data.bookings
-                bookings.splice(index, 1)
-                page.setData({ bookings: bookings })
-            }
-        })
-
-    },
-
-    getData() {
-        let page = this;
-        wx.request({
-            url: `${app.globalData.baseUrl}/lessons/mylessons`,
-            method: 'GET',
-            header: app.globalData.header,
-            success(res) {
-                const { lessons } = res.data;
-                page.setData({
-                    teachings: lessons,
-                });
-                console.log(res.data)
-            }
-        })
-    },
-    /**
-     * Lifecycle function--Called when page is initially rendered
-     */
-    onReady() {
-
-    },
-
-    /**
-     * Lifecycle function--Called when page show
-     */
-    onShow() {
-        let page = this;
-        wx.request({
-            url: `${app.globalData.baseUrl}/bookings`,
-            method: 'GET',
-            header: app.globalData.header,
-            success(res) {
-                console.log(res.data.bookings)
-                page.setData({ bookings: res.data.bookings })
-            }
-        })
-    },
-
-    /**
-     * Lifecycle function--Called when page hide
-     */
-    onHide() {
-
-    },
-
-    /**
-     * Lifecycle function--Called when page unload
-     */
-    onUnload() {
-
-    },
-
-    /**
-     * Page event handler function--Called when user drop down
-     */
-    onPullDownRefresh() {
-
-    },
-
-    /**
-     * Called when page reach bottom
-     */
-    onReachBottom() {
-
-    },
-
-    /**
-     * Called when user click on the top right corner to share
-     */
-    onShareAppMessage() {
-
+  data: {
+    motto: 'Hello World',
+    userInfo: {},
+    hasUserInfo: false,
+    canIUse: wx.canIUse('button.open-type.getUserInfo'),
+    canIUseGetUserProfile: false,
+    canIUseOpenData: wx.canIUse('open-data.type.userAvatarUrl') && wx.canIUse('open-data.type.userNickName') // 如需尝试获取用户信息可改为false
+  },
+  // 事件处理函数
+  bindViewTap() {
+    wx.navigateTo({
+      url: '../logs/logs'
+    })
+  },
+  onLoad() {
+    if (wx.getUserProfile) {
+      this.setData({
+        canIUseGetUserProfile: true
+      })
     }
+  },
+  getUserProfile(e) {
+    // 推荐使用wx.getUserProfile获取用户信息，开发者每次通过该接口获取用户个人信息均需用户确认，开发者妥善保管用户快速填写的头像昵称，避免重复弹窗
+    wx.getUserProfile({
+      desc: '展示用户信息', // 声明获取用户个人信息后的用途，后续会展示在弹窗中，请谨慎填写
+      success: (res) => {
+        console.log(res)
+        this.setData({
+          userInfo: res.userInfo,
+          hasUserInfo: true
+        })
+      }
+    })
+  },
+
+  getUserInfo(e) {
+    // 不推荐使用getUserInfo获取用户信息，预计自2021年4月13日起，getUserInfo将不再弹出弹窗，并直接返回匿名的用户个人信息
+    console.log(e)
+    this.setData({
+      userInfo: e.detail.userInfo,
+      hasUserInfo: true
+    })
+  }
+})
+
+wx.cloud.callFunction({
+  name: 'test',
+  complete: res => {
+    console.log('callFunction test result: ', res)
+  }
 })

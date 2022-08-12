@@ -1,5 +1,10 @@
 <!--pages/bookings/index.wxml-->
 <view style="background-color: rgb(230,230,230); background-size: cover; height: 100vh; overflow-y: scroll;">
+  <view class="bookings-banner" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://res.cloudinary.com/jerrytongshanghailewagon/image/upload/v1660273622/Learners%27%20Loft/students_o0pyos.jpg)">
+    <view>
+      <image src="https://avatars.githubusercontent.com/u/107707256?v=4" class="avatar"></image>
+    </view>
+  </view>
     <view class="headers">
         <button bindtap="switchList" data-name="bookings">Learning</button>
         <button bindtap="switchList" data-name="teach">Teaching</button>

@@ -3,6 +3,36 @@ page {
     --orange: #F27E0D;
     --purple: #7E0DF2;
 }
+.bookings-banner {
+  padding: 8px;
+  background-size: cover;
+  background-position: center;
+  height: 480rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 24px;
+  font-weight: bold;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+  border-radius: 5px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+}
+
+.avatar {
+    position: absolute;
+    right: -160px;
+    top: 90px;
+    height: 140rpx;
+    width: 140rpx;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    position: relative;
+    border-radius: 25%;
+    box-shadow: 0 0 8rpx rgb(1,1,1)
+  }
+
 .headers {
     display: flex;
     margin-top: 20rpx;
