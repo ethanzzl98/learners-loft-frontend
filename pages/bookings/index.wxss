@@ -6,6 +6,52 @@ page {
     --button-default-color: #F3F3F3;
 }
 
+.bookings-banner {
+  padding: 8px;
+  background-size: cover;
+  background-position: center;
+  height: 480rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 24px;
+  font-weight: bold;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+  border-radius: 5px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  
+}
+
+.name {
+  top: 200rpx;
+  right: -190rpx;
+  position: relative;
+  overflow: hidden;
+  color: purple;
+  border: 0 0 8rpx rgb(1,1,1);
+}
+
+.avatar {
+    /* position: absolute; */
+    right: -180px;
+    top: 90rpx;
+    height: 150rpx;
+    width: 150rpx;
+    display: flex;
+    /* justify-content: space-between; */
+    /* align-items: flex-end; */
+    position: relative;
+    border-radius: 50%;
+    overflow: hidden;
+    /* box-shadow: 0 0 8rpx rgb(1,1,1);sa */
+  }
+
+.headers {
+    display: flex;
+    margin-top: 20rpx;
+}
+
 .lesson-box {
   margin: 10rpx;
   background-color: var(--lesson-box-bgcolor);
