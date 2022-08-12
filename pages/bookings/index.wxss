@@ -7,7 +7,7 @@ page {
 }
 
 .bookings-banner {
-  padding: 8px;
+  /* padding: 8px; */
   background-size: cover;
   background-position: center;
   height: 400rpx;
@@ -20,7 +20,6 @@ page {
   text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
   border-radius: 5px;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
-  
 }
 
 .name {
@@ -33,19 +32,23 @@ page {
 }
 
 .avatar {
-    /* position: absolute; */
-    right: -180px;
-    top: 90rpx;
+    position: absolute;
+    /* right: -150rpx; */
+    /* top: 120rpx; */
+    bottom: 40rpx;
+    right: 40rpx;
     height: 150rpx;
     width: 150rpx;
-    display: flex;
+    /* display: flex; */
     /* justify-content: space-between; */
     /* align-items: flex-end; */
-    position: relative;
+    /* position: relative; */
     border-radius: 50%;
+    
     overflow: hidden;
+    /* box-shadow: 1px 1px 4px 1px #ffffff; */
     /* box-shadow: 0 0 8rpx rgb(1,1,1);sa */
-  }
+}
 
 .headers {
     display: flex;
