@@ -18,14 +18,13 @@
     </view>
     <view class="lessons-container" wx:else>
         <view class="header">What I'm Teaching</view>
-        <view class="card-booking" wx:for="{{teachings}}">
+        <view class="card-booking" wx:for="{{teachings}}" data-id="{{item.id}}">
             <image src="{{ item.icon_url || '/images/booked.png'}}" class="pic">Subject icon</image>
             <view class="card-booking-info">
                 <view class="subject">{{item.subject}}</view>
                 <view class="title">{{item.title}}</view>
                 <view class="time">{{item.start_time}} - {{item.end_time}}</view>
             </view>
-            <image bindtap="deleteConfirm" data-id="{{item.id}}" data-index="{{index}}" class="cancel-icon" src="/images/cancel.png"></image>
         </view>
     </view>
 </view>
