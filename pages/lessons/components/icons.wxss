@@ -16,6 +16,29 @@
   z-index: 2;
 }
 
+.close {
+  display: flex;
+  position: relative;
+}
+
+.icon-header {
+  display: flex;
+  justify-content: center;
+  color: #7E0DF2;
+  font-weight: 600;
+  font-size: x-large;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  margin-bottom: 10rpx;
+  margin-top: -65rpx;
+}
+
+.close-btn {
+  height: 64rpx;
+  width: 64rpx;
+  margin-left: 600rpx;
+  margin-top: 25rpx;
+} 
+
 .content {
   width: 90%; height: 80%;
   background-color: #FFF;

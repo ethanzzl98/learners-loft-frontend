@@ -4,7 +4,12 @@
 <view class="wrapper">
 
     <view class="content">
-      <view class="header">Click Icon to select</view>
+      <view class="close">
+        <image bindtap="closeIconPicker" class="close-btn" src="/images/close.png"></image>
+      </view>
+      <view class="icon-header">
+        <text>Click Icon to Select</text>
+      </view>
       
       <view class="icon-container">
         <image wx:for="{{icons}}" src="{{item}}" bindtap="chooseIcon" data-index="{{index}}" mode="widthFix"></image>

@@ -35,7 +35,17 @@ Page({
     })
   },
 
+
+  closeIconPicker() {
+    this.setData({
+      showIconPicker: false
+    })
+  },
+
+  createLesson: function () {
+
   createLesson() {
+
     const page = this;
     if (page.data.isEdit) {
       this.makeUpdateLessonRequest()
@@ -97,6 +107,22 @@ Page({
       app.globalData.lessonId = undefined;
     } 
     page.setData(data);
+
+    page.setData({
+      'lesson.user_id': app.globalData.user.id
+    })
+  },
+  goBack() {
+    if (this.data.isEdit) {
+      wx.redirectTo({
+        url: `/pages/lessons/show?id=${this.data.id}`,
+      })
+    } else {
+      wx.switchTab({
+        url: '/pages/lessons/index'
+      })
+    }
+
   },
 
   getISODate(str) {
@@ -110,3 +136,5 @@ Page({
     return `${yearString}-${monthString}-${dayString}`;
   }
 })
+
+

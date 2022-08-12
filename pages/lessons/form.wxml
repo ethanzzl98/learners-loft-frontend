@@ -1,13 +1,16 @@
 <view class="page-container">
   <view class="main">
+
     <form bindsubmit="save">
       <view class="header">{{isEdit ? "Edit Lesson" : "Add Lesson"}}</view>
+
+    
 
       <!-- background-image: linear-gradient(135deg, rgba(243,126,34,.4) 65%, rgba(125,18,238,.5) 100%); -->
 
 
-    <view class="section">
-      <input data-name="subject" bindinput="updateData" value="{{lesson.subject}}" class="weui-input" auto-focus placeholder="Subject"/>
+    <view class="section" >
+      <input data-name="subject" bindinput="updateData"  value="{{lesson.subject}}" class="weui-input" auto-focus placeholder="Subject"/>
     </view>
 
     <view class="section">
@@ -40,16 +43,20 @@
       <textarea data-name="description" value="{{lesson.description}}" bindinput="updateData" class="weui-input" auto-focus placeholder="Lesson Description"/>
     </view>
 
-    <view class="section">
-      <input wx:if="{{!lesson.icon_url}}" class="weui-input" bindtap="chooseIcon" auto-focus placeholder="Choose icon"/>
-      <image wx:else bindtap="chooseIcon" src="{{lesson.icon_url}}"/>
+    <view class="section" bindtap="chooseIcon" >
+      <input wx:if="{{!lesson.icon_url}}" class="weui-input"  auto-focus placeholder="Choose icon"/>
+      <image wx:else src="{{lesson.icon_url}}"/>
       <view wx:if="{{!lesson.icon_url}}" class="section-icon"></view>
     </view>
 
-    <button class="btn-primary" bindtap="createLesson">Save</button>
+    <view class="button-flex">
+      <button class="btn-primary" bindtap="createLesson">Save</button>
+      <button class="btn-delete" bindtap="goBack">Cancel</button>
+    </view>
+
     </form>
   </view>
-  <choose-icons bind:changeIcon="changeIcon" wx:if="{{showIconPicker}}" />
+  <choose-icons bind:closeIconPicker="closeIconPicker" bind:changeIcon="changeIcon" wx:if="{{showIconPicker}}" />
 </view>
 
 
