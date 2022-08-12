@@ -44,7 +44,7 @@
     </view>
 
     <view class="section" bindtap="chooseIcon" >
-      <input wx:if="{{!lesson.icon_url}}" class="weui-input"  auto-focus placeholder="Choose icon"/>
+      <input wx:if="{{!lesson.icon_url}}" maxlength="100" class="weui-input"  auto-focus placeholder="Choose icon"/>
       <image wx:else src="{{lesson.icon_url}}"/>
       <view wx:if="{{!lesson.icon_url}}" class="section-icon"></view>
     </view>
