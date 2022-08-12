@@ -8,12 +8,14 @@
     <view class="lessons-container" wx:if="{{showListName === 'learning'}}">
       <view class="header">What I'm Learning</view>
       <view class="card-booking" wx:for="{{bookings}}" data-id="{{item.lesson.id}}" bindtap="goToLesson">
+      <view class="card-info">
         <image src="{{ item.lesson.icon_url || '/images/booked.png'}}" class="pic">Subject icon</image>
         <view class="card-booking-info">
           <view class="subject">{{item.lesson.subject}}</view>
           <view class="title">{{item.lesson.title}}</view>
           <view class="time">{{item.lesson.start_time}} - {{item.lesson.end_time}}</view>
         </view>
+      </view>
         <image catchtap="deleteConfirm" data-id="{{item.id}}" data-index="{{index}}" class="cancel-icon" src="/images/cancel.png"></image>
       </view>
     </view>
