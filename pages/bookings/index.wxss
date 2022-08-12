@@ -17,20 +17,31 @@ page {
   text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
   border-radius: 5px;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  
+}
+
+.name {
+  top: 200rpx;
+  right: -190rpx;
+  position: relative;
+  overflow: hidden;
+  color: purple;
+  border: 0 0 8rpx rgb(1,1,1);
 }
 
 .avatar {
-    position: absolute;
-    right: -160px;
-    top: 90px;
-    height: 140rpx;
-    width: 140rpx;
+    /* position: absolute; */
+    right: -180px;
+    top: 90rpx;
+    height: 150rpx;
+    width: 150rpx;
     display: flex;
-    justify-content: space-between;
-    align-items: flex-end;
+    /* justify-content: space-between; */
+    /* align-items: flex-end; */
     position: relative;
-    border-radius: 25%;
-    box-shadow: 0 0 8rpx rgb(1,1,1)
+    border-radius: 50%;
+    overflow: hidden;
+    /* box-shadow: 0 0 8rpx rgb(1,1,1);sa */
   }
 
 .headers {

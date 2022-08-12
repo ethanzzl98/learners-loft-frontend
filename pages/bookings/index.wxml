@@ -1,9 +1,9 @@
 <!--pages/bookings/index.wxml-->
 <view style="background-color: rgb(230,230,230); background-size: cover; height: 100vh; overflow-y: scroll;">
-  <view class="bookings-banner" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://res.cloudinary.com/jerrytongshanghailewagon/image/upload/v1660273622/Learners%27%20Loft/students_o0pyos.jpg)">
-    <view>
-      <image src="https://avatars.githubusercontent.com/u/107707256?v=4" class="avatar"></image>
-    </view>
+  <view class="bookings-banner" style="background-image: linear-gradient(rgba(255, 255, 255,.4), #000000), url(https://res.cloudinary.com/jerrytongshanghailewagon/image/upload/v1660273622/Learners%27%20Loft/students_o0pyos.jpg)">
+      <!-- <image src= class="avatar"></image> -->
+        <open-data type="userAvatarUrl" class="avatar"></open-data>
+        <open-data type="userNickName" class="name"></open-data>
   </view>
     <view class="headers">
         <button bindtap="switchList" data-name="bookings">Learning</button>
