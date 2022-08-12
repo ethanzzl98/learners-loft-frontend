@@ -2,18 +2,29 @@
 page {
     --orange: #F27E0D;
     --purple: #7E0DF2;
+    --lesson-box-bgcolor: #FFFFFF;
+    --button-default-color: #F3F3F3;
 }
+
+.lesson-box {
+  margin: 10rpx;
+  background-color: var(--lesson-box-bgcolor);
+  padding-bottom: 10rpx;
+}
+
+.btn-active {
+  color: var(--orange);
+  background-color: var(--lesson-box-bgcolor);
+}
+
+.btn-inactive {
+  color: var(--orange);
+  background-color: var(--button-default-color);
+}
+
 .headers {
     display: flex;
-    margin-top: 20rpx;
-}
-
-.headers button {
-    color: var(--orange);
-}
-
-.headers button.active {
-    color: var(--purple);
+    margin-top: 30rpx;
 }
 
 .card-booking {
