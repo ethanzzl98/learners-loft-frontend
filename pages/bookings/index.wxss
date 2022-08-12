@@ -10,7 +10,7 @@ page {
   padding: 8px;
   background-size: cover;
   background-position: center;
-  height: 480rpx;
+  height: 400rpx;
   display: flex;
   justify-content: center;
   align-items: center;
