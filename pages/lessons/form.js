@@ -83,8 +83,8 @@ Page({
       lesson: {
         user_id: app.globalData.user.id,
         start_date: page.getISODate(),
-        start_time: "12:00",
-        end_time: "13:00",
+        start_time: "10:00",
+        end_time: "11:00",
       },
       id: null,
     };
