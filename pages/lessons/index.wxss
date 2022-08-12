@@ -1,4 +1,23 @@
 /* pages/lessons/index.wxss */
+.main-image {
+  background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('https://images.unsplash.com/photo-1531545514256-b1400bc00f31?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OHx8c3R1ZGVudHN8ZW58MHx8MHx8&auto=format&fit=crop&w=800&q=60');  
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  padding: 20rpx 20rpx;
+  height: 360rpx;
+}
+
+.company-header {
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  letter-spacing: 6rpx;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 100rpx;
+  color: #f78d02;
+  text-shadow: 2px 4px 2px rgb(5, 5, 5);
+}
+
 .flip-card {
   background: transparent;
   height: 250rpx;
