@@ -27,8 +27,15 @@ page {
     margin-top: 30rpx;
 }
 
+.card-info {
+  display: flex;
+  align-items: center;
+}
+
 .card-booking {
   display: flex;
+  justify-content: space-between;
+  padding-right: 50rpx;
   align-items: center;
   background: white;
   box-shadow: 0 0 8rpx rgb(1,1,1);
@@ -46,8 +53,8 @@ page {
 }
 
 .cancel-icon {
-  height: 64rpx;
-  width: 64rpx;
+  height: 72rpx;
+  width: 72rpx;
 }
 
 .card-booking-info {
