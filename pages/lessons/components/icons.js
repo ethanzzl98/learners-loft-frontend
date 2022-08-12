@@ -36,6 +36,11 @@ Component({
       let icon = this.data.icons[index]
       this.triggerEvent('changeIcon', {index, icon})
       this.setData({index, icon})
-    }
-  }
+    },
+    
+      closeIconPicker(e){
+        this.triggerEvent('closeIconPicker')
+      },
+  },
+
 })

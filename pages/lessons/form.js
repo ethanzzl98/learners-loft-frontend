@@ -35,6 +35,12 @@ Page({
     })
   },
 
+  closeIconPicker() {
+    this.setData({
+      showIconPicker: false
+    })
+  },
+
   createLesson: function () {
     const page = this;
     if (page.data.isEdit) {
@@ -93,5 +99,18 @@ Page({
     page.setData({
       'lesson.user_id': app.globalData.user.id
     })
+  },
+  goBack() {
+    if (this.data.isEdit) {
+      wx.redirectTo({
+        url: `/pages/lessons/show?id=${this.data.id}`,
+      })
+    } else {
+      wx.switchTab({
+        url: '/pages/lessons/index'
+      })
+    }
   }
 })
+
+
