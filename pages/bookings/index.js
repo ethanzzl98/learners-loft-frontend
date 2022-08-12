@@ -16,6 +16,41 @@ Page({
     console.log(this.data.showListName);
   },
 
+  onShow() {
+    this.getMyLearning();
+    this.getMyTeaching();
+  },
+
+  getMyLearning() {
+    let page = this;
+    wx.request({
+      url: `${app.globalData.baseUrl}/bookings`,
+      method: 'GET',
+      header: app.globalData.header,
+      success(res) {
+        page.setData({
+          bookings: res.data.bookings
+        })
+        console.log("learning:", page.data.bookings)
+      }
+    })
+  },
+
+  getMyTeaching() {
+    let page = this;
+    wx.request({
+      url: `${app.globalData.baseUrl}/lessons/mylessons`,
+      method: 'GET',
+      header: app.globalData.header,
+      success(res) {
+        page.setData({
+          teachings: res.data.lessons,
+        });
+        console.log("lessons:", page.data.teachings)
+      }
+    })
+  },
+
   deleteConfirm(e) {
     const page = this;
     wx.showModal({
@@ -44,41 +79,6 @@ Page({
         let bookings = page.data.bookings
         bookings.splice(index, 1)
         page.setData({ bookings: bookings })
-      }
-    })
-
-  },
-
-  onShow() {
-    this.getBookings()
-    this.getMyTeaching()
-  },
-
-  getBookings() {
-    let page = this;
-    wx.request({
-      url: `${app.globalData.baseUrl}/bookings`,
-      method: 'GET',
-      header: app.globalData.header,
-      success(res) {
-        console.log(res.data.bookings)
-        page.setData({ bookings: res.data.bookings })
-      }
-    })
-  },
-
-  getMyTeaching() {
-    let page = this;
-    wx.request({
-      url: `${app.globalData.baseUrl}/lessons/mylessons`,
-      method: 'GET',
-      header: app.globalData.header,
-      success(res) {
-        const { lessons } = res.data;
-        page.setData({
-          teachings: res.data,
-        });
-        console.log("lessons:", res.data)
       }
     })
   },
