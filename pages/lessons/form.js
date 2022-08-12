@@ -44,7 +44,7 @@ Page({
 
   createLesson: function () {
 
-  createLesson() {
+  // createLesson() {
 
     const page = this;
     if (page.data.isEdit) {
